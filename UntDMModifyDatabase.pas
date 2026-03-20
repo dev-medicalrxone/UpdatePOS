@@ -4161,6 +4161,7 @@ begin
   CreateFields('DAILYTOTALS', 'END_OF_DAY', 'BIT null');
   CreateFields('DAILYTOTALS', 'END_OF_DAY_COMPLETED', 'BIT default (0) null');
   CreateFields('DAILYTOTALS', 'EOD_LINK', 'int null');
+  CreateFields('DAILYTOTALS', 'COUPONREAD', 'DECIMAL(18,2) default(0) null');  //Field added for coupons processed AGC 032026
   ExecQryCreate(CALC_DAILYTOTALS.SQL.Text);
   CreateFields('BUTTONS_MOBILE_DETAIL', 'row', 'int null');
   CreateFields('BUTTONS_MOBILE_DETAIL', 'col', 'int null');
@@ -4574,6 +4575,8 @@ begin
   CreateFields('CREDITDEBITSETUP', 'ACTIVE_COMMISSIONS', 'bit null');
   CreateFields('TRANSACTIONHEADER', 'SALESMAN', 'NCHAR(3) null');
   CreateFields('TRANSACTIONHEADER_TEMP', 'SALESMAN', 'NCHAR(3) null');
+  CreateFields('TRANSACTIONHEADER', 'LAST4', 'int null');          //Field added for vertransacciones filter AGC 032026
+  CreateFields('TRANSACTIONHEADER_TEMP', 'LAST4', 'int null');     //Field added for vertransacciones filter AGC 032026
   CreateFields('TRANSACTIONDETAIL_TEMP', 'COMMISSION', 'decimal(18,2) null');
   CreateFields('TRANSACTIONDETAIL', 'COMMISSION', 'decimal(18,2) null');
   CreateFields('INVENTARIOPISO', 'PRECIOVENTA3', 'float null');
