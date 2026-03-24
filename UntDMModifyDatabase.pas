@@ -1070,6 +1070,7 @@ type
     ufn_ChecksumDigit: TFDQuery;
     USP_POS_INSERT_SPINPOS_TRANS: TFDQuery;
     CALC_PAYOUT: TFDQuery;
+    tr_SPINPOS_AfterInsert_UpdateTransactionHeader: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure cdsPriceTableAfterPost(DataSet: TDataSet);
     Procedure ExecSql(Token: String);
@@ -4754,6 +4755,7 @@ begin
   ExecQryCreate(CREATEWILLCAL_STATUS_LHISTORY.SQL.Text);
   ExecQryCreate(EXPORTTOWILLCAL_STATUS_LHISTORY.SQL.Text);
   ExecQryCreate(CALC_PERCENTAGE_DISCOUNT.SQL.Text);
+  ExecQryCreate(tr_SPINPOS_AfterInsert_UpdateTransactionHeader.SQL.Text);
 
   ExecQryCreate(PSEUDO_SALES_LOG.sql.Text);
   ExecQryCreate(INVENTORY_CART.SQL.Text);
