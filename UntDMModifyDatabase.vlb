@@ -13,23 +13,14 @@ Coordinates=6414,4766,112,58
 [cdsOTCORG_PROS_PROD_SERVID]
 Coordinates=1155,3092,232,36
 
-[cdsPrescriptionsEXPORT_TORXTEMP1]
-Coordinates=1155,3147,246,36
-
 [STARTBANK]
 Coordinates=5344,4834,91,58
 
 [CALC_HEAD_TOTALS_DEL_TRIG]
 Coordinates=3611,4834,217,58
 
-[PACIENTES_PLANES]
-Coordinates=2643,4834,144,58
-
 [cdsOTCBATCH_NUMBER]
 Coordinates=1155,3202,167,36
-
-[cdsPrescriptionsLABELCODESNO]
-Coordinates=1155,3257,213,36
 
 [cdsOTCUNIT_OF_MEASURE]
 Coordinates=1155,3312,186,36
@@ -40,9 +31,6 @@ Coordinates=1155,3367,129,36
 [cdsOTCSCCD_354_NX]
 Coordinates=1155,3422,150,36
 
-[CANCEL_NEW_RX_NORX]
-Coordinates=7204,4766,171,58
-
 [DELETE_SIGNATURE]
 Coordinates=6223,10,145,58
 
@@ -52,17 +40,8 @@ Coordinates=1155,3477,236,36
 [cdsOTCRXDENIALCLARIF]
 Coordinates=1155,3532,171,36
 
-[BESTRX]
-Coordinates=3069,10,65,58
-
 [NEXT_MAIN_COURSE_ID]
 Coordinates=1375,4698,169,58
-
-[cdsPrescriptionsWC_EMPLOYER_NAME]
-Coordinates=1155,3587,252,36
-
-[UPDATE_PATPLAN_PLANNUMBER]
-Coordinates=4859,4698,227,58
 
 [cdsOTCADHERENCE]
 Coordinates=1155,3642,141,36
@@ -79,41 +58,20 @@ Coordinates=1155,3697,158,36
 [cdsOTCWC_117_TR]
 Coordinates=1155,3752,135,36
 
-[cdsPrescriptionsUNIT_DOSE_INDICATOR]
-Coordinates=1155,3807,259,36
-
-[OTCCONTROLADOS]
-Coordinates=3734,4698,140,58
-
 [TRANSACTIONDETAIL_CANCELTRANS]
 Coordinates=4502,4834,252,58
 
 [cdsOTCWC_124_TY]
 Coordinates=1155,3862,134,36
 
-[cdsPrescriptionsSPIDN_454_EK]
-Coordinates=1155,3917,201,36
-
-[CREATE_FIX_CONTROLADO]
-Coordinates=7494,4766,190,58
-
 [EXPORTTOWILLCAL_STATUS_LHISTORY]
 Coordinates=8695,4698,267,58
-
-[cdsPrescriptionsHCPCS]
-Coordinates=1155,3972,154,36
 
 [cdsInventarioPisoSHOWINDIVIDUAL]
 Coordinates=1155,4027,228,36
 
-[cdsPrescriptionsANNOTATIONS]
-Coordinates=1155,4082,201,36
-
 [cdsPriceTableDISPFEEADDON]
 Coordinates=1155,4137,197,36
-
-[DELETE_RXTEMP1NORX]
-Coordinates=174,4834,168,58
 
 [CDSPatPlanINACTIVE_DATE]
 Coordinates=1155,4192,186,36
@@ -124,38 +82,17 @@ Coordinates=1155,4247,235,36
 [PATIENT_SEARCH]
 Coordinates=4394,10,128,58
 
-[INSERT_CASH_PLAN]
-Coordinates=7050,4766,144,58
-
 [cdsInventarioPisoTAXABLE_ESTATAL]
 Coordinates=1155,4302,238,36
 
-[cdsPrescriptionsDISPENSING_STATUS]
-Coordinates=1155,4357,245,36
-
 [cdsOTCNUMEROTRANSACCION]
 Coordinates=1155,4412,210,36
-
-[cdsPrescriptionsFLAT_SALES_TAXSUB]
-Coordinates=1155,4467,247,36
-
-[cdsPrescriptionsLICENCIA]
-Coordinates=1155,4522,168,36
-
-[cdsPrescriptionsCOMPOUND_TYPE_996_G1]
-Coordinates=1155,4577,278,36
 
 [cdsOTCFLAT_SALES_TAXSUB]
 Coordinates=1155,4632,199,36
 
 [cdsOTCWF_BILLED]
 Coordinates=1155,4687,132,36
-
-[cdsPrescriptionsPS_518_FI]
-Coordinates=1155,4742,173,36
-
-[INSERTPATPLAN]
-Coordinates=1172,4834,119,58
 
 [FDTransaction1]
 Coordinates=1155,4797,106,36
@@ -165,12 +102,6 @@ Coordinates=1155,4852,97,36
 
 [cdsOTCIAID_464_EX]
 Coordinates=1155,4907,139,36
-
-[cdsPrescriptionsSALESTAX]
-Coordinates=1155,4962,175,36
-
-[cdsPrescriptionsPRODUCT_ID]
-Coordinates=1155,5017,192,36
 
 [cdsInventarioPisoFECHA_EXPIRACION]
 Coordinates=1155,5072,245,36
@@ -196,9 +127,6 @@ Coordinates=1155,5402,139,36
 [cdsOTCOP_AMOUNTPAIDCOUNT]
 Coordinates=1155,5457,217,36
 
-[cdsPrescriptionsASEGURADOPRINCIPAL]
-Coordinates=1155,5512,258,36
-
 [cdsInventarioPisoMAIN_NDC]
 Coordinates=1155,5567,183,36
 
@@ -223,20 +151,8 @@ Coordinates=1155,5842,263,36
 [cdsInventarioPisoWAC_PRICE]
 Coordinates=1155,5897,192,36
 
-[cdsPrescriptionsPS_575_EQ]
-Coordinates=1155,5952,180,36
-
-[cdsPrescriptionsSERVICEPROVID]
-Coordinates=1155,6007,214,36
-
-[cdsPrescriptionsPRIMARYCAREPROVIDQUALIFIER]
-Coordinates=1155,6062,319,36
-
 [cdsOTCLABEL_NAME]
 Coordinates=1155,6117,145,36
-
-[cdsPrescriptionsHORA]
-Coordinates=1155,6172,146,36
 
 [CALC_TAB_BALANCE]
 Coordinates=5187,4834,147,58
@@ -244,23 +160,14 @@ Coordinates=5187,4834,147,58
 [DSPatPlan]
 Coordinates=519,2894,77,36
 
-[Index_OTC_NoReceta]
-Coordinates=2489,4834,144,58
-
 [DSPacientes]
 Coordinates=519,2377,89,36
 
 [cdsOTCWC_CLAIMREF_ID]
 Coordinates=1155,6227,174,36
 
-[NEXT_APPRISS_TN]
-Coordinates=1976,4766,135,58
-
 [cdsOTCASSOC_RX_SERVICE_REF_NO]
 Coordinates=1155,6282,252,36
-
-[cdsPrescriptionsPERSONCODE]
-Coordinates=1155,6337,200,36
 
 [cdsInventarioPisoOUTERPACKAGEUNIT]
 Coordinates=1546,1,252,36
@@ -277,20 +184,8 @@ Coordinates=1546,166,197,36
 [TEMP]
 Coordinates=6173,4766,50,58
 
-[cdsPrescriptionsPS_137_UP]
-Coordinates=1546,221,179,36
-
 [cdsOTCPRECIOFACTURACION]
 Coordinates=1546,276,202,36
-
-[cdsPrescriptionsPRODUCTSERVIDQUAL]
-Coordinates=1546,331,254,36
-
-[cdsPrescriptionsSTATUS_RX]
-Coordinates=1546,386,184,36
-
-[cdsPrescriptionsDIAGNOSIS_CODE_COUNT]
-Coordinates=1546,441,276,36
 
 [cdsInventarioPisoHCPCS]
 Coordinates=1546,496,161,36
@@ -298,32 +193,14 @@ Coordinates=1546,496,161,36
 [WC_PICKUP_TF]
 Coordinates=8426,4698,113,58
 
-[cdsPrescriptionsUNIT_OF_MEASURE]
-Coordinates=1546,551,234,36
-
 [cdsOTCWF_CHECKED]
 Coordinates=1546,606,150,36
 
 [AUSPICIO]
 Coordinates=7284,10,76,58
 
-[UPDATE_OTC_REFILL_NOTIFIED]
-Coordinates=3217,4834,217,58
-
-[UPDATE_PRESCRIPTIONS_NOCLIENTE]
-Coordinates=6378,10,257,58
-
-[cdsPrescriptionsCARDHOLDER_ID]
-Coordinates=1546,661,218,36
-
-[cdsPrescriptionsNUMERODOCTOR]
-Coordinates=1546,716,221,36
-
 [cdsInventarioPisoPACKAGESIZE]
 Coordinates=1546,771,206,36
-
-[RX_VIEW_NOT_COMPOUNDS]
-Coordinates=2660,4698,197,58
 
 [CDSPacientesDIRECCION1]
 Coordinates=1546,826,177,36
@@ -349,17 +226,11 @@ Coordinates=1546,1156,179,36
 [cdsInventarioPisoMETRIC_UNIT]
 Coordinates=1546,1211,202,36
 
-[cdsPrescriptionsGANANCIA]
-Coordinates=1546,1266,176,36
-
 [qPatPlan]
 Coordinates=2241,4698,67,58
 
 [CDSPacientesAPELLIDOMATERNO]
 Coordinates=1546,1321,224,36
-
-[cdsPrescriptionsNUMEROREFILLSDISPENSADOS]
-Coordinates=1546,1376,310,36
 
 [qInventarioPiso]
 Coordinates=1261,4698,104,58
@@ -369,9 +240,6 @@ Coordinates=1816,4766,150,58
 
 [cdsOTCNO_REF_DISPENSADO]
 Coordinates=1546,1431,203,36
-
-[cdsPrescriptionsWC_124_TY]
-Coordinates=1546,1486,182,36
 
 [cdsInventarioPisoPRODUCTNO]
 Coordinates=1546,1541,198,36
@@ -403,26 +271,11 @@ Coordinates=1546,1816,106,36
 [cdsInventarioPiso]
 Coordinates=492,10,236,1972
 
-[cdsPrescriptionsNDC]
-Coordinates=1546,1871,137,36
-
 [cdsOTCCOMPING_COMP_COUNT]
 Coordinates=1546,1926,219,36
 
 [cdsOTCTXR]
 Coordinates=1546,1981,87,36
-
-[INSERT_RX]
-Coordinates=1368,4766,86,58
-
-[CALC_TOTAL_RXDISPONIBLE_RXTEMP1_UPDATE]
-Coordinates=5746,10,324,58
-
-[RX_PROCESADAS]
-Coordinates=7756,10,128,58
-
-[cdsPrescriptionsWC_121_TV]
-Coordinates=1546,2036,182,36
 
 [cdsOTCATENDIDOPOR]
 Coordinates=1546,2091,155,36
@@ -430,26 +283,8 @@ Coordinates=1546,2091,155,36
 [CDSPacientesSEXO]
 Coordinates=1546,2146,133,36
 
-[cdsPrescriptionsPATIENTPHONENUMBER]
-Coordinates=1546,2201,263,36
-
-[RECALL_RX_FROM_BACKUP]
-Coordinates=5963,4834,193,58
-
-[cdsPrescriptionsPAGADA]
-Coordinates=1546,2256,162,36
-
-[cdsPrescriptionsCOMPOUNDCODE]
-Coordinates=1546,2311,221,36
-
 [cdsOTCPS_348_HK]
 Coordinates=1546,2366,131,36
-
-[CHANGE_PRESCRIBER]
-Coordinates=2797,4834,159,58
-
-[cdsPrescriptionsRXORIGINCODE]
-Coordinates=1546,2421,209,36
 
 [dspInventarioPiso]
 Coordinates=1546,2476,117,36
@@ -475,20 +310,8 @@ Coordinates=3144,10,123,58
 [cdsInventarioPisoAllowControledRefills]
 Coordinates=1546,2806,239,36
 
-[cdsPrescriptionsPS_513_FD]
-Coordinates=1546,2861,179,36
-
-[NEXTRX_MEZCLA_TRAN_NO]
-Coordinates=5820,4698,193,58
-
 [cdsOTCWC_120_TU]
 Coordinates=1546,2916,135,36
-
-[cdsPrescriptionsCOMPDISP_UNIT_FORM_INDI]
-Coordinates=1546,2971,291,36
-
-[cdsPrescriptionsPS_347_HJ]
-Coordinates=1546,3026,177,36
 
 [cdsClaimsOTCNUMBER]
 Coordinates=1546,3081,156,36
@@ -496,23 +319,11 @@ Coordinates=1546,3081,156,36
 [cdsOTCSIGNATURE_LINK]
 Coordinates=1546,3136,171,36
 
-[cdsPrescriptionsDIAGNOSISCODE]
-Coordinates=1546,3191,217,36
-
-[cdsPrescriptionsPRIORAUTHORIZATION]
-Coordinates=1546,3246,254,36
-
 [CDSPacientesINTERES]
 Coordinates=1546,3301,153,36
 
-[cdsPrescriptionsPHARMACIST]
-Coordinates=1546,3356,193,36
-
 [cdsOTCPS_517_FH]
 Coordinates=1546,3411,131,36
-
-[cdsPrescriptionsRXDENIALOVERRIDE]
-Coordinates=1546,3466,240,36
 
 [cdsOTCWC_EMPLOYER_STATE]
 Coordinates=1546,3521,208,36
@@ -520,14 +331,8 @@ Coordinates=1546,3521,208,36
 [cdsInventarioPisoEXPIRE_OTHER]
 Coordinates=1546,3576,215,36
 
-[cdsPrescriptionsPS_346_HH]
-Coordinates=1546,3631,180,36
-
 [cdsOTCPS_571_NZ]
 Coordinates=1546,3686,131,36
-
-[cdsPrescriptionsSUB_CLARIF_CODE]
-Coordinates=1546,3741,232,36
 
 [UPDATE_INVENTORY]
 Coordinates=7125,4698,148,58
@@ -544,32 +349,17 @@ Coordinates=1546,3906,181,36
 [cdsOTCDURINTERVENTIONCODE]
 Coordinates=1546,3961,221,36
 
-[cdsPrescriptionsWC_122_TW]
-Coordinates=1546,4016,186,36
-
-[INSERT_OTC_LOG]
-Coordinates=2558,4766,129,58
-
 [cdsInventarioPisoMAC_PRICE]
 Coordinates=1546,4071,191,36
 
 [cdsOTCPS_136_UN]
 Coordinates=1546,4126,132,36
 
-[cdsPrescriptionsPRECIOVENTA]
-Coordinates=1546,4181,201,36
-
-[cdsPrescriptionsPRECIOFACTURACION]
-Coordinates=1546,4236,250,36
-
 [cdsOTCINCENTIVE_FEE_PAID]
 Coordinates=1546,4291,198,36
 
 [NEXTINSTANCIA_SIGNATURE]
 Coordinates=2318,4698,198,58
-
-[cdsPrescriptionsPS_514_FE]
-Coordinates=1546,4346,178,36
 
 [INVENTORY_CONTROL]
 Coordinates=4504,4698,158,58
@@ -583,38 +373,14 @@ Coordinates=1546,4456,171,36
 [QCreateBackupDB]
 Coordinates=3277,10,123,58
 
-[cdsPrescriptionsPRESC_SRN]
-Coordinates=1546,4511,187,36
-
-[cdsPrescriptionsRXDENIALCLARIF]
-Coordinates=1546,4566,219,36
-
-[cdsPrescriptionsOTHERCOVERAGECODE]
-Coordinates=1546,4621,263,36
-
 [cdsOTCPROF_SERV_FEE_SUB]
 Coordinates=1546,4676,203,36
-
-[cdsPrescriptionsASSOC_RX_SERVICE_DATE]
-Coordinates=1546,4731,283,36
 
 [cdsInventarioPisoPRECIO_DACO]
 Coordinates=1546,4786,209,36
 
-[cdsPrescriptionsINCENTIVE_AMOUNT_SUB]
-Coordinates=1546,4841,273,36
-
-[INSERT_CASH_PLAN_EMPTY]
-Coordinates=1163,4766,195,58
-
-[cdsPrescriptionsPRIMARYPRESCRIBER]
-Coordinates=1546,4896,250,36
-
 [cdsInventarioPisoCAUTION2]
 Coordinates=1546,4951,181,36
-
-[cdsPrescriptionsSPECIAL_PACK_INDI_429_DT]
-Coordinates=1546,5006,290,36
 
 [cdsOTC]
 Coordinates=10,10,231,4678
@@ -634,9 +400,6 @@ Coordinates=1546,5226,221,36
 [cdsInventarioPisoCAUTION3]
 Coordinates=1546,5281,181,36
 
-[cdsPrescriptionsOP_REJECTCOUNT]
-Coordinates=1546,5336,229,36
-
 [cdsOTCBSC_392_MU]
 Coordinates=1546,5391,143,36
 
@@ -646,32 +409,14 @@ Coordinates=1546,5446,152,36
 [cdsOTCPRIMARYPRESCRIBER]
 Coordinates=1546,5501,202,36
 
-[PRESCRIPTION_FULL]
-Coordinates=2083,4698,148,58
-
 [CALC_ORDER_TOTAL]
 Coordinates=3884,4698,150,58
-
-[cdsPrescriptionsWC_119_TT]
-Coordinates=1894,1,181,36
-
-[cdsPrescriptionsNOREFDISP]
-Coordinates=1894,56,184,36
-
-[cdsPrescriptionsFECHAULTIMOREFILL]
-Coordinates=1894,111,244,36
 
 [TRANSACTIONDETAIL_DELETE_PRODUCT]
 Coordinates=1796,4698,277,58
 
-[cdsPrescriptionsWC_EMPLOYER_CONTACT]
-Coordinates=1894,166,277,36
-
 [cdsOTCWC_126_UA]
 Coordinates=1894,221,136,36
-
-[cdsPrescriptionsMEDICAMENTOORIGINAL]
-Coordinates=1894,276,266,36
 
 [cdsOTCRX]
 Coordinates=1894,331,79,36
@@ -697,35 +442,17 @@ Coordinates=1894,551,193,36
 [cdsOTCPICKEDUPBY_RELATION]
 Coordinates=1894,606,214,36
 
-[FIX_CONTROLADO]
-Coordinates=1609,4834,131,58
-
 [cdsOTCRX_STATUS]
 Coordinates=1894,661,136,36
 
 [cdsOTCPS_133_UJ]
 Coordinates=1894,716,129,36
 
-[CALC_RXDISPONIBLE]
-Coordinates=10,4698,150,58
-
 [cdsOTCWF_SIGNATURE]
 Coordinates=1894,771,162,36
 
-[dspPrescriptioons]
-Coordinates=1894,826,117,36
-
 [cdsPriceTableCODE_RANGE]
 Coordinates=1894,881,185,36
-
-[RXCONTROLADAS]
-Coordinates=6198,4698,129,58
-
-[cdsPrescriptionsDISPENSING_FEE_PAID]
-Coordinates=1894,936,257,36
-
-[DELETE_RXTEMP1TERMINADA]
-Coordinates=3031,4766,206,58
 
 [cdsOTCCOMPOUND_TYPE_996_G1]
 Coordinates=1894,991,230,36
@@ -751,9 +478,6 @@ Coordinates=1894,1266,201,36
 [UPDATE_PATIENT_NOTIFICATIONS]
 Coordinates=6764,10,233,58
 
-[cdsPrescriptionsCODIGOMEZCLA]
-Coordinates=1894,1321,212,36
-
 [INSERT_NEWTAB]
 Coordinates=6040,4766,123,58
 
@@ -762,9 +486,6 @@ Coordinates=1894,1376,214,36
 
 [cdsInventarioPisoPRECIO]
 Coordinates=1894,1431,165,36
-
-[RX_VIEW]
-Coordinates=4420,4834,72,58
 
 [cdsInventarioPisoROBOT]
 Coordinates=1894,1486,162,36
@@ -781,32 +502,14 @@ Coordinates=1894,1651,222,36
 [cdsOTCRXDENIALOVERRIDE]
 Coordinates=1894,1706,192,36
 
-[AddOTCFields]
-Coordinates=4992,10,99,58
-
-[QPrescriptions]
-Coordinates=7385,4766,99,58
-
-[cdsPrescriptionsWC_120_TU]
-Coordinates=1894,1761,183,36
-
-[cdsPrescriptionsOP_AMOUNTPAIDCOUNT]
-Coordinates=1894,1816,265,36
-
 [cdsInventarioPisoPRICE_UPDATE]
 Coordinates=1894,1871,214,36
 
 [cdsClaimsCLAIM]
 Coordinates=1894,1926,113,36
 
-[cdsPrescriptionsCOMPING_COMP_COUNT]
-Coordinates=1894,1981,267,36
-
 [cdsOTCINSTANCIA]
 Coordinates=1894,2036,129,36
-
-[cdsPrescriptionsPS_136_UN]
-Coordinates=1894,2091,180,36
 
 [cdsOTCIMPRIMIR]
 Coordinates=1894,2146,120,36
@@ -835,9 +538,6 @@ Coordinates=7713,4698,143,58
 [GROUP_PROD_POS]
 Coordinates=5258,4766,139,58
 
-[cdsPrescriptionsDAW]
-Coordinates=1894,2421,139,36
-
 [cdsOTCEP_TRANSACTION_NUMBER]
 Coordinates=1894,2476,239,36
 
@@ -856,14 +556,8 @@ Coordinates=1894,2641,130,36
 [cdsClaimsSERVICEDATE]
 Coordinates=1894,2696,164,36
 
-[PRESCRIPTIONS_HISTORY]
-Coordinates=353,4698,182,58
-
 [cdsInventarioPisoPATROCINIO]
 Coordinates=1894,2751,196,36
-
-[cdsPrescriptions]
-Coordinates=251,10,231,4436
 
 [INSERTPRODUCT]
 Coordinates=5686,4834,124,58
@@ -883,26 +577,14 @@ Coordinates=1894,2861,136,36
 [cdsOTCWC_118_TS]
 Coordinates=1894,2916,134,36
 
-[INSERT_PARATA_QUERIE]
-Coordinates=1881,4834,175,58
-
 [Index_NCPATNAME]
 Coordinates=352,4834,133,58
-
-[cdsPrescriptionsWC_125_TZ]
-Coordinates=1894,2971,181,36
-
-[cdsPrescriptionsPS_512_FC]
-Coordinates=1894,3026,179,36
 
 [cdsInventarioPisoREVENUE_CODE]
 Coordinates=1894,3081,222,36
 
 [cdsOTCPAGADA]
 Coordinates=1894,3136,114,36
-
-[cdsPrescriptionsTRANSACTION_CODE]
-Coordinates=1894,3191,244,36
 
 [cdsOTCPAGO_PLAN]
 Coordinates=1894,3246,138,36
@@ -915,15 +597,6 @@ Coordinates=1894,3356,95,36
 
 [CDSPatPlanCH_FIRSTNAME]
 Coordinates=1894,3411,185,36
-
-[QUpdateOTC]
-Coordinates=10,4766,93,58
-
-[cdsPrescriptionsEP_TRANSACTION_NUMBER]
-Coordinates=1894,3466,287,36
-
-[cdsPrescriptionsFECHAVENTA]
-Coordinates=1894,3521,195,36
 
 [cdsOTCWC_EMPLOYER_CITY]
 Coordinates=1894,3576,196,36
@@ -946,9 +619,6 @@ Coordinates=1894,3796,247,36
 [cdsOTCPARTIAL_COMPLETION]
 Coordinates=1894,3851,206,36
 
-[NC_NOCLIENTE_NORX]
-Coordinates=3444,4834,157,58
-
 [CLOSE_BALANCE]
 Coordinates=698,4698,124,58
 
@@ -961,23 +631,11 @@ Coordinates=1894,3961,182,36
 [Directory_PrescriberCreate]
 Coordinates=1428,4834,171,58
 
-[cdsPrescriptionsDISPENSINGFEE]
-Coordinates=1894,4016,213,36
-
-[cdsPrescriptionsORG_PRESC_QTY]
-Coordinates=1894,4071,222,36
-
-[cdsPrescriptionsWC_123_TX]
-Coordinates=1894,4126,182,36
-
 [cdsOTCNUMEROCLIENTE]
 Coordinates=1894,4181,172,36
 
 [cdsOTCMEZCLA_TRAN_NO]
 Coordinates=1894,4236,181,36
-
-[cdsPrescriptionsMETRICDECIMALQUANTITY]
-Coordinates=1894,4291,279,36
 
 [cdsOTCOTHERAMOUNTCLAIMEDSUBCOUNT]
 Coordinates=1894,4346,289,36
@@ -985,17 +643,8 @@ Coordinates=1894,4346,289,36
 [cdsOTCWC_PICKUP]
 Coordinates=1894,4401,137,36
 
-[cdsPrescriptionsNUMEROPLAN]
-Coordinates=1894,4456,199,36
-
-[NEXT_BATCH_NUMBER]
-Coordinates=7370,10,161,58
-
 [cdsOTCPRIMARYCAREPROVLASTNAME]
 Coordinates=1894,4511,259,36
-
-[cdsPrescriptionsWC_EMPLOYER_STATE]
-Coordinates=1894,4566,256,36
 
 [cdsOTCSERVICEPROVIDQUALIFIER]
 Coordinates=1894,4621,234,36
@@ -1006,12 +655,6 @@ Coordinates=1894,4676,89,36
 [cdsOTCMETRICDECIMALQUANTITY]
 Coordinates=1894,4731,231,36
 
-[cdsPrescriptionsPRIMARYCAREPROVLOCATIONCODE]
-Coordinates=1894,4786,341,36
-
-[cdsPrescriptionsWC_EMLPOYER_ZIP]
-Coordinates=1894,4841,235,36
-
 [cdsInventarioPisoISBN]
 Coordinates=1894,4896,146,36
 
@@ -1021,26 +664,14 @@ Coordinates=1894,4951,214,36
 [cdsOTCPRINT_Q]
 Coordinates=1894,5006,117,36
 
-[cdsPrescriptionsWC_126_UA]
-Coordinates=1894,5061,184,36
-
-[CALC_TOTAL_RXDISPONIBLE]
-Coordinates=6917,4698,198,58
-
 [cdsInventarioPisoEDITAR_PRECIO]
 Coordinates=1894,5116,219,36
-
-[NEXTOTC]
-Coordinates=5096,4698,75,58
 
 [cdsInventarioPisoCODIGOBARRA]
 Coordinates=1894,5171,212,36
 
 [TRANSACTIONDETAIL_DELETE]
 Coordinates=2121,4766,207,58
-
-[UPDATE_RXTEMP1_MEZCLA]
-Coordinates=1464,4766,192,58
 
 [cdsInventarioPisoMETRICSIZE]
 Coordinates=1894,5226,194,36
@@ -1057,26 +688,14 @@ Coordinates=1894,5391,253,36
 [AUSPICIOTOTAL]
 Coordinates=6923,4766,117,58
 
-[cdsPrescriptionsPRIMARYCAREPROVID]
-Coordinates=1894,5446,252,36
-
 [INSERT_PRINT_Q]
 Coordinates=8641,4766,124,58
-
-[cdsPrescriptionsFECHAEXPIRACION]
-Coordinates=1894,5501,231,36
-
-[cdsPrescriptionsCANTIDAD]
-Coordinates=2273,1,174,36
 
 [cdsInventarioPisoDESCUENTO]
 Coordinates=2273,56,196,36
 
 [cdsInventarioPisoULTIMAVENTA]
 Coordinates=2273,111,206,36
-
-[cdsPrescriptionsCUPON_VALUE_AMT]
-Coordinates=2273,166,238,36
 
 [cdsOTCWC_EMPLOYER_CONTACT]
 Coordinates=2273,221,229,36
@@ -1089,15 +708,6 @@ Coordinates=2273,331,316,36
 
 [cdsOTCPRAC_353_NR]
 Coordinates=2273,386,150,36
-
-[cdsPrescriptionsPER_SALESTAX_BASIS_SUB]
-Coordinates=2273,441,286,36
-
-[cdsPrescriptionsPST_147_U7]
-Coordinates=2273,496,186,36
-
-[QAlterViewRxControladas]
-Coordinates=4280,4698,164,58
 
 [SQDSPacientesFD1]
 Coordinates=3707,4766,131,58
@@ -1114,15 +724,6 @@ Coordinates=2273,606,242,36
 [dspClaims]
 Coordinates=2273,661,75,36
 
-[UPDATE_PRESCRIPTION]
-Coordinates=6536,4766,169,58
-
-[cdsPrescriptionsNDCDESPACHADO]
-Coordinates=2273,716,226,36
-
-[cdsPrescriptionsACTIVE]
-Coordinates=2273,771,155,36
-
 [cdsOTCCOSTOVENTA]
 Coordinates=2273,826,149,36
 
@@ -1138,14 +739,8 @@ Coordinates=2273,881,255,36
 [cdsInventarioPisoCOMESPECIAL]
 Coordinates=2273,936,208,36
 
-[cdsPrescriptionsBSC_392_MU]
-Coordinates=2273,991,191,36
-
 [cdsInventarioPisoPRECIOVENTA2]
 Coordinates=2273,1046,215,36
-
-[cdsPrescriptionsNUMEROCLIENTE]
-Coordinates=2273,1101,220,36
 
 [cdsOTCSALESTAX]
 Coordinates=2273,1156,127,36
@@ -1156,17 +751,8 @@ Coordinates=2273,1211,169,36
 [CDSPatPlanHOME_PLAN]
 Coordinates=2273,1266,165,36
 
-[cdsPrescriptionsMEDICAMENTO]
-Coordinates=2273,1321,205,36
-
-[cdsPrescriptionsWC_EMPLOYER_PHONE]
-Coordinates=2273,1376,260,36
-
 [cdsInventarioPisoINFOADICIONAL]
 Coordinates=2273,1431,216,36
-
-[cdsPrescriptionsPS_572_4U]
-Coordinates=2273,1486,178,36
 
 [cdsInventarioPisoPRECIO_CAJA]
 Coordinates=2273,1541,205,36
@@ -1177,17 +763,11 @@ Coordinates=2273,1596,171,36
 [cdsOTCMEDICAMENTOORIGINAL]
 Coordinates=2273,1651,218,36
 
-[cdsPrescriptionsPS_133_UJ]
-Coordinates=2273,1706,177,36
-
 [cdsOTCFACILITY_ID]
 Coordinates=2273,1761,137,36
 
 [CAMBIARACASH]
 Coordinates=6791,4698,116,58
-
-[INSERT_DISPPILL]
-Coordinates=5445,4834,125,58
 
 [POS_INVENTORY_CONTROL]
 Coordinates=502,4766,192,58
@@ -1198,32 +778,17 @@ Coordinates=738,10,186,564
 [cdsInventarioPisoSALES_PROMOTION_ID]
 Coordinates=2273,1816,263,36
 
-[cdsPrescriptionsASSOC_RX_SERVICE_REF_NO]
-Coordinates=2273,1871,300,36
-
 [qClaims]
 Coordinates=4679,4766,61,58
 
-[cdsPrescriptionsREVENUE_CODE]
-Coordinates=2273,1926,215,36
-
 [NEXTINSTANCIA]
 Coordinates=5721,4766,117,58
-
-[CHANGE_PATIENT]
-Coordinates=4676,10,130,58
 
 [cdsInventarioPisoPAKAGE_ID]
 Coordinates=2273,1981,189,36
 
 [cdsOTCAMOUNT_COPAY_COINS]
 Coordinates=2273,2036,215,36
-
-[cdsPrescriptionsPS_517_FH]
-Coordinates=2273,2091,179,36
-
-[cdsPrescriptionsePRESCRIBE_IDMess]
-Coordinates=2273,2146,240,36
 
 [cdsOTCPATIENTLOCATION]
 Coordinates=2273,2201,180,36
@@ -1243,12 +808,6 @@ Coordinates=7208,10,66,58
 [cdsOTCAUDITED]
 Coordinates=2273,2421,117,36
 
-[UPDATE_RX_REJECTED]
-Coordinates=6023,4698,165,58
-
-[cdsPrescriptionsCASHPLAN]
-Coordinates=2273,2476,178,36
-
 [cdsOTCTIME_RX]
 Coordinates=2273,2531,117,36
 
@@ -1264,23 +823,11 @@ Coordinates=1073,10,149,322
 [RXTEMP1]
 Coordinates=2625,10,75,58
 
-[cdsPrescriptionsDIASSUPLIDOS]
-Coordinates=2273,2696,204,36
-
-[cdsPrescriptionsLOTE]
-Coordinates=2273,2751,143,36
-
 [cdsOTCNUMERO_AUTORIZACION]
 Coordinates=2273,2806,221,36
 
 [cdsInventarioPisoCMININVENTARIO]
 Coordinates=2273,2861,227,36
-
-[cdsPrescriptionsNO_HORA]
-Coordinates=2273,2916,172,36
-
-[cdsPrescriptionsWC_EMPLOYER_CITY]
-Coordinates=2273,2971,244,36
 
 [cdsOTCDEDUCIBLE]
 Coordinates=2273,3026,134,36
@@ -1291,15 +838,6 @@ Coordinates=2273,3081,116,36
 [cdsOTCOTHERCOVERAGECODE]
 Coordinates=2273,3136,215,36
 
-[cdsPrescriptionsDUROUTCOMECODE]
-Coordinates=2273,3191,238,36
-
-[cdsPrescriptionsSCANED_RX_LINK]
-Coordinates=2273,3246,223,36
-
-[cdsPrescriptionsIAID_464_EX]
-Coordinates=2273,3301,187,36
-
 [cdsOTCNO_HORA]
 Coordinates=2273,3356,124,36
 
@@ -1309,23 +847,11 @@ Coordinates=2840,10,93,58
 [cdsOTCWF_CASHIER]
 Coordinates=2273,3411,145,36
 
-[DOCTOR_CREATE_UPDATE]
-Coordinates=1479,10,187,58
-
-[cdsPrescriptionsOTAMCLDSUBCOUNTQUAL]
-Coordinates=2273,3466,277,36
-
-[cdsPrescriptionsPATIENTLOCATION]
-Coordinates=2273,3521,228,36
-
 [cdsOTCPS_572_4U]
 Coordinates=2273,3576,130,36
 
 [CDSPatPlanMEDIGAP_ID]
 Coordinates=2273,3631,165,36
-
-[cdsPrescriptionsMEDICAID_PAID_AMOUNT]
-Coordinates=2273,3686,271,36
 
 [cdsOTCWF_REVERSE]
 Coordinates=2273,3741,149,36
@@ -1336,20 +862,11 @@ Coordinates=2273,3796,223,36
 [cdsOTCPS_346_HH]
 Coordinates=2273,3851,132,36
 
-[cdsPrescriptionsPS_521_FL]
-Coordinates=2273,3906,177,36
-
 [UPDATE_DEBT]
 Coordinates=495,4834,107,58
 
-[cdsPrescriptionsCONTROLADO]
-Coordinates=2273,3961,199,36
-
 [cdsOTCUNIT_DOSE_INDICATOR]
 Coordinates=2273,4016,212,36
-
-[cdsPrescriptionsNUMEROAUTORIZACION]
-Coordinates=2273,4071,262,36
 
 [cdsClaims]
 Coordinates=1232,10,94,190
@@ -1360,17 +877,8 @@ Coordinates=2273,4126,200,36
 [CALCRXDISPONIBLE]
 Coordinates=545,4698,143,58
 
-[PRESC_DEL_DEPENDENCIES]
-Coordinates=6715,4766,198,58
-
 [cdsOTCWC_119_TT]
 Coordinates=2273,4181,133,36
-
-[RECALL_RX]
-Coordinates=8327,4698,89,58
-
-[cdsPrescriptionsCOSTOVENTA]
-Coordinates=2273,4236,197,36
 
 [cdsInventarioPisoCAUTION1]
 Coordinates=2273,4291,181,36
@@ -1384,15 +892,6 @@ Coordinates=2273,4346,209,36
 [cdsInventarioPisoRECETARIO]
 Coordinates=2273,4401,191,36
 
-[OTCHISTORY]
-Coordinates=4172,4698,98,58
-
-[UPDATE_CLAIM_SEGMENT]
-Coordinates=5848,4766,182,58
-
-[cdsPrescriptionsPAI_391_MT]
-Coordinates=2273,4456,184,36
-
 [FDConnection1]
 Coordinates=2273,4511,104,36
 
@@ -1405,32 +904,14 @@ Coordinates=1026,4698,225,58
 [CDSPatPlanMEDICAID_AGENCY_NUMBER]
 Coordinates=2273,4566,272,36
 
-[cdsPrescriptionsNUMEROREFILLSAUTORIZADOS]
-Coordinates=2273,4621,310,36
-
-[cdsPrescriptionsCANTIDADRECETADA]
-Coordinates=2273,4676,244,36
-
-[UPDATE_RX_SCANED_RXLINK]
-Coordinates=8775,4766,204,58
-
-[INSERT_CLAIM]
-Coordinates=8524,4766,107,58
-
 [cdsOTCSUB_CLARIF_CODE]
 Coordinates=2273,4731,184,36
-
-[cdsPrescriptionsFECHARECETA]
-Coordinates=2273,4786,204,36
 
 [cdsOTCWF_FILLED]
 Coordinates=2273,4841,131,36
 
 [cdsOTCPHARMACIST]
 Coordinates=2273,4896,145,36
-
-[BRAND_RX]
-Coordinates=2988,4698,84,58
 
 [cdsOTCCHECKED]
 Coordinates=2273,4951,123,36
@@ -1444,17 +925,8 @@ Coordinates=2273,5061,144,36
 [RX]
 Coordinates=4454,4698,40,58
 
-[cdsPrescriptionsPERCENTAGE_SALES_TAX_RATE]
-Coordinates=2273,5116,318,36
-
-[cdsPrescriptionsATENDIDAPOR]
-Coordinates=2273,5171,201,36
-
 [LAST_IDENTITY]
 Coordinates=8935,10,112,58
-
-[cdsPrescriptionsSUB_CLAR_CODE]
-Coordinates=2273,5226,220,36
 
 [UPDATE_TRANSACTION_HEADER]
 Coordinates=818,4834,225,58
@@ -1474,38 +946,17 @@ Coordinates=2273,5391,167,36
 [cdsPriceTableCOST_BASES]
 Coordinates=2273,5446,181,36
 
-[Index_NCPrescName]
-Coordinates=704,4766,138,58
-
 [INSERTDIRECTORY]
 Coordinates=8114,10,136,58
 
 [cdsInventarioPisoCODIGO]
 Coordinates=2273,5501,168,36
 
-[cdsPrescriptionsPS_558_AW]
-Coordinates=2629,1,182,36
-
-[cdsPrescriptionsSUB_CLAR_CODE_COUNT]
-Coordinates=2629,56,272,36
-
-[cdsPrescriptionsDURINTERVENTIONCODE]
-Coordinates=2629,111,268,36
-
 [cdsOTCPS_559_AX]
 Coordinates=2629,166,131,36
 
-[cdsPrescriptionsUSUARIO_NO]
-Coordinates=2629,221,193,36
-
 [cdsOTCWF_PRINTED]
 Coordinates=2629,276,144,36
-
-[CALC_RXDISPONIBLE_DEL]
-Coordinates=4239,4766,182,58
-
-[Insert_Prescriber_directory]
-Coordinates=1676,10,170,58
 
 [cdsInventarioPisoPRICE_TABLE_ID]
 Coordinates=2629,331,223,36
@@ -1513,29 +964,14 @@ Coordinates=2629,331,223,36
 [cdsOTCOTHERAMOUNTCLAIMEDSUB]
 Coordinates=2629,386,244,36
 
-[cdsPrescriptionsBASISOFCOST]
-Coordinates=2629,441,200,36
-
-[cdsPrescriptionsPERCENTAGE_SALES_TAX_SUB]
-Coordinates=2629,496,310,36
-
 [cdsOTCQTY_INTENDED_DISP]
 Coordinates=2629,551,197,36
 
 [CDSPatPlanNUMEROCLIENTE]
 Coordinates=2629,606,197,36
 
-[cdsPrescriptionsPMC_459_ER]
-Coordinates=2629,661,191,36
-
 [cdsOTCFECHAOTC]
 Coordinates=2629,716,131,36
-
-[cdsPrescriptionsWC_EMPLOYER_STREET]
-Coordinates=2629,771,265,36
-
-[cdsPrescriptionsCLINICIDNUMBER]
-Coordinates=2629,826,219,36
 
 [CALC_HEAD_TOTALS_TRIG]
 Coordinates=6596,4698,185,58
@@ -1546,15 +982,6 @@ Coordinates=2629,881,180,36
 [cdsPriceTableCOSTADDON]
 Coordinates=2629,936,177,36
 
-[INSERT_OVER_TC]
-Coordinates=1991,10,128,58
-
-[DropPrimaryKeyPrescriptioon]
-Coordinates=832,4698,184,58
-
-[UPDATE_OTC_QTY]
-Coordinates=4431,4766,133,58
-
 [cdsInventarioPisoEXPIRE_OPTION]
 Coordinates=2629,991,219,36
 
@@ -1563,12 +990,6 @@ Coordinates=3838,4834,248,58
 
 [cdsOTCWC_EMLPOYER_ZIP]
 Coordinates=2629,1046,187,36
-
-[REFILL_VALUES]
-Coordinates=7894,10,115,58
-
-[APPRISS_VIEW]
-Coordinates=6645,10,109,58
 
 [cdsOTCDAW]
 Coordinates=2629,1101,91,36
@@ -1582,9 +1003,6 @@ Coordinates=2629,1211,126,36
 [cdsOTCFECHAEXPIRACION]
 Coordinates=2629,1266,183,36
 
-[cdsPrescriptionsWC_CARRIER_ID]
-Coordinates=2629,1321,215,36
-
 [cdsInventarioPisoULTIMOCAMBIO]
 Coordinates=2629,1376,215,36
 
@@ -1596,9 +1014,6 @@ Coordinates=2629,1486,135,36
 
 [PRODUCTSALES]
 Coordinates=4044,4698,118,58
-
-[cdsPrescriptionsSERVICEPROVIDQUALIFIER]
-Coordinates=2629,1541,282,36
 
 [cdsClaimsTYPIST]
 Coordinates=2629,1596,119,36
@@ -1612,26 +1027,11 @@ Coordinates=2629,1651,133,36
 [cdsPriceTablePRICE_TABLE_ID]
 Coordinates=2629,1706,203,36
 
-[cdsPrescriptionsDURCONFLICTCODE]
-Coordinates=2629,1761,237,36
-
-[UPDATE_OTC_BATCH]
-Coordinates=852,4766,150,58
-
 [cdsOTCREFILL_NOTIFIED]
 Coordinates=2629,1816,171,36
 
-[UPDATE_RX_REVERSAL]
-Coordinates=4816,10,166,58
-
-[NEXTRX_TRAN_NO]
-Coordinates=4532,10,134,58
-
 [cdsOTCBILL_LATTER]
 Coordinates=2629,1871,144,36
-
-[cdsPrescriptionsPAGOPLAN]
-Coordinates=2629,1926,179,36
 
 [DELETE_PRINT_QUERIES]
 Coordinates=7694,4766,174,58
@@ -1648,35 +1048,20 @@ Coordinates=2629,2091,141,36
 [cdsOTCPER_SALESTAX_BASIS_SUB]
 Coordinates=2629,2146,238,36
 
-[cdsPrescriptionsPS_559_AX]
-Coordinates=2629,2201,179,36
-
 [CALC_HEAD_TOTALS]
 Coordinates=2332,4834,147,58
 
 [CDSPatPlanPLAN_ID]
 Coordinates=2629,2256,140,36
 
-[cdsPrescriptionsDEDUCIBLE]
-Coordinates=2629,2311,182,36
-
 [cdsOTCPST_147_U7]
 Coordinates=2629,2366,138,36
-
-[cdsPrescriptionsINFORMACION_EXT]
-Coordinates=2629,2421,232,36
-
-[cdsPrescriptionsULTIMO_REFILL]
-Coordinates=2629,2476,208,36
 
 [cdsOTCOTCOTHERAMOUNTCLAIMEDSUB]
 Coordinates=2629,2531,271,36
 
 [INSERT_RXDATA]
 Coordinates=4935,4766,120,58
-
-[cdsPrescriptionsROUTEOFADMIN_995_E2]
-Coordinates=2629,2586,264,36
 
 [CDSPatPlanRELACION]
 Coordinates=2629,2641,152,36
@@ -1693,17 +1078,8 @@ Coordinates=2629,2806,140,36
 [cdsOTCCOMPDOSAGE_FORM_DESC_CODE]
 Coordinates=2629,2861,284,36
 
-[OTC_HISTORY]
-Coordinates=3733,10,105,58
-
-[cdsPrescriptionsCODIGOREFILLNUEVO]
-Coordinates=2629,2916,249,36
-
 [cdsOTCDIAGNOSISCODE]
 Coordinates=2629,2971,169,36
-
-[cdsPrescriptionsCOB_OTHERPAYMENTCOUNT]
-Coordinates=2629,3026,295,36
 
 [cdsOTCPS_574_2Y]
 Coordinates=2629,3081,129,36
@@ -1714,44 +1090,17 @@ Coordinates=2629,3136,177,36
 [CALC_TRANSFER_TOTAL]
 Coordinates=4096,4834,172,58
 
-[UPDATE_OTC_RXPAID]
-Coordinates=2066,4834,155,58
-
-[VERIFYRXTEMP1]
-Coordinates=1750,4834,121,58
-
-[cdsPrescriptionsPRESCRIBERIDQUALIFIER]
-Coordinates=2629,3191,272,36
-
 [cdsOTCCLINICIDNUMBER]
 Coordinates=2629,3246,171,36
-
-[cdsPrescriptionsPS_571_NZ]
-Coordinates=2629,3301,179,36
-
-[cdsPrescriptionsWC_118_TS]
-Coordinates=2629,3356,182,36
 
 [cdsOTCINGREDIENT_COST_PAID]
 Coordinates=2629,3411,219,36
 
-[INSERT_RESPONSE]
-Coordinates=3558,4766,139,58
-
 [CLONE_PRODUCT]
 Coordinates=3420,4766,128,58
 
-[cdsPrescriptionsAMOUNT_COPAY_COINS]
-Coordinates=2629,3466,263,36
-
 [cdsOTCWC_EMPLOYER_STREET]
 Coordinates=2629,3521,217,36
-
-[cdsPrescriptionsCUPON_NUMBER]
-Coordinates=2629,3576,217,36
-
-[cdsPrescriptionsREFILL_AUTOMATICO]
-Coordinates=2629,3631,245,36
 
 [FDQuery2]
 Coordinates=7630,4698,73,58
@@ -1762,15 +1111,6 @@ Coordinates=2629,3686,168,36
 [cdsOTCPICKEDUP_ID]
 Coordinates=2629,3741,146,36
 
-[cdsPrescriptionsPLANMEDICO]
-Coordinates=2629,3796,193,36
-
-[cdsPrescriptionsSIG]
-Coordinates=2629,3851,131,36
-
-[cdsPrescriptionsSPI]
-Coordinates=2629,3906,130,36
-
 [cdsClaimsRX_NUMBER]
 Coordinates=2629,3961,154,36
 
@@ -1780,17 +1120,8 @@ Coordinates=8019,10,85,58
 [cdsOTCLEVELOFSERVICE]
 Coordinates=2629,4016,175,36
 
-[cdsPrescriptionsPMCC_458_SE]
-Coordinates=2629,4071,199,36
-
-[cdsPrescriptionsCANTIDADDESPACHADA]
-Coordinates=2629,4126,262,36
-
 [EDIT_INVENTORY]
 Coordinates=1856,10,125,58
-
-[cdsPrescriptionsINCENTIVE_FEE_PAID]
-Coordinates=2629,4181,246,36
 
 [cdsOTCPRODUCT_ID]
 Coordinates=2629,4236,144,36
@@ -1813,24 +1144,11 @@ Coordinates=2629,4511,238,36
 [cdsOTCPS_558_AW]
 Coordinates=2629,4566,134,36
 
-[cdsPrescriptionsMessageID]
-Coordinates=2629,4621,174,36
-
-[CANCEL_NEW_RX]
-Coordinates=5608,10,128,58
-Visible=True
-
-[UPDATE_PRESCRIPTION_ALL]
-Coordinates=7421,4698,199,58
-
 [WILLCALL_DELETE]
 Coordinates=5820,4834,133,58
 
 [cdsInventarioPisoGROUP_QTY]
 Coordinates=2629,4676,196,36
-
-[cdsPrescriptionsPS_520_FK]
-Coordinates=2629,4731,178,36
 
 [cdsOTCUSUARIO_NO]
 Coordinates=2629,4786,145,36
@@ -1841,9 +1159,6 @@ Coordinates=2629,4841,189,36
 [cdsInventarioPisoVERSION_DESCRIPTION]
 Coordinates=2629,4896,268,36
 
-[cdsPrescriptionsIATID_463_EW]
-Coordinates=2629,4951,198,36
-
 [cdsOTCPLANESMEDICOSNO]
 Coordinates=2629,5006,190,36
 
@@ -1853,71 +1168,23 @@ Coordinates=2629,5061,154,36
 [DELETETRANS]
 Coordinates=2966,4834,107,58
 
-[cdsPrescriptionsPS_574_2Y]
-Coordinates=2629,5116,177,36
-
-[Index_RX_ID]
-Coordinates=2359,10,91,58
-
-[cdsPrescriptionsWC_DATE_OF_INJURY]
-Coordinates=2629,5171,249,36
-
 [CDSPacientesLIMITECREDITO]
 Coordinates=2629,5226,197,36
-
-[cdsPrescriptionsCANTIDAD_DISPONIBLE]
-Coordinates=2629,5281,258,36
-
-[cdsPrescriptionsPAGO]
-Coordinates=2629,5336,146,36
 
 [cdsOTCORG_PRESC_QTY]
 Coordinates=2629,5391,174,36
 
-[cdsPrescriptionsOTHER_AMOUNT_PAID]
-Coordinates=2629,5446,253,36
-
-[UPDATE_PRESCRIPTIONS_NORX]
-Coordinates=4163,10,221,58
-
 [INSERT_ESIGNATURE]
 Coordinates=7932,4698,151,58
 
-[Index_Prescription_NumeroReceta]
-Coordinates=5595,4698,215,58
-
-[cdsPrescriptionsPS_134_UK]
-Coordinates=2629,5501,179,36
-
 [cdsOTCUNIT_PRICE]
 Coordinates=2977,1,137,36
-
-[Index_PAT_NUMBER]
-Coordinates=1666,4766,140,58
-
-[DELETE_OTC]
-Coordinates=6391,4834,98,58
-
-[dsPrescriptions]
-Coordinates=519,7470,103,36
-
-[Index_PatPlanNC_NOCLIENTE]
-Coordinates=612,4834,196,58
-
-[cdsPrescriptionsPS_577_G3]
-Coordinates=2977,56,179,36
 
 [CDSPacientesFECHANACIMIENTO]
 Coordinates=2977,111,221,36
 
 [cdsOTCPS_347_HJ]
 Coordinates=2977,166,129,36
-
-[R_DOCTOR]
-Coordinates=4763,4698,86,58
-
-[cdsPrescriptionsCUPONTYPE]
-Coordinates=2977,221,188,36
 
 [NEXTBARCODE]
 Coordinates=2867,4698,111,58
@@ -1928,32 +1195,14 @@ Coordinates=113,4766,189,58
 [DELETE_SCANED_Q]
 Coordinates=1012,4766,141,58
 
-[UPDATE_OTC_HEALTHPLAN]
-Coordinates=7007,10,191,58
-
-[cdsPrescriptionsCOBRADO_POS]
-Coordinates=2977,276,207,36
-
-[cdsPrescriptionsDAYS_SUPPLY_INTEND_DISP]
-Coordinates=2977,331,293,36
-
 [cdsOTCCUPON_VALUE_AMT]
 Coordinates=2977,386,190,36
 
 [INSERTINVENTORY]
 Coordinates=8549,4698,136,58
 
-[cdsPrescriptionsGROSSAMOUNTDUE]
-Coordinates=2977,441,237,36
-
-[CLEAN_OTC]
-Coordinates=6166,4834,91,58
-
 [cdsOTCTOTAL]
 Coordinates=2977,496,102,36
-
-[cdsPrescriptionsWC_CLAIMREF_ID]
-Coordinates=2977,551,222,36
 
 [INSERT_ESIGNATURE_PICTURE]
 Coordinates=8541,10,214,58
@@ -1988,29 +1237,14 @@ Coordinates=3848,4766,112,58
 [cdsOTCPDN_SENT]
 Coordinates=2977,936,129,36
 
-[cdsPrescriptionsETIQUETA]
-Coordinates=2977,991,173,36
-
 [cdsOTCWC_123_TX]
 Coordinates=2977,1046,134,36
 
 [DSPPatPlan]
 Coordinates=2977,1101,86,36
 
-[cdsPrescriptionsPRAC_353_NR]
-Coordinates=2977,1156,198,36
-
-[cdsPrescriptionsPROVIDERID]
-Coordinates=2977,1211,189,36
-
-[cdsPrescriptionsQTY_INTENDED_DISP]
-Coordinates=2977,1266,245,36
-
 [CDSPatPlanPP997_G2]
 Coordinates=2977,1321,149,36
-
-[UPDATE_PRICING_SEGMENT]
-Coordinates=8226,4766,196,58
 
 [UPDATE_TH_BALANCE]
 Coordinates=8260,10,157,58
@@ -2030,35 +1264,11 @@ Coordinates=2977,1431,167,36
 [cdsOTCSPIDN_454_EK]
 Coordinates=2977,1486,153,36
 
-[cdsPrescriptionsMEZCLA]
-Coordinates=2977,1541,161,36
-
 [cdsOTCQTY_TEMP]
 Coordinates=2977,1596,130,36
 
-[cdsPrescriptionsMETRICQUANTITY]
-Coordinates=2977,1651,223,36
-
-[cdsPrescriptionsPS_523_FN]
-Coordinates=2977,1706,179,36
-
-[UPDATE_OTC]
-Coordinates=7541,10,100,58
-
-[cdsPrescriptionsPROF_SERV_FEE_SUB]
-Coordinates=2977,1761,251,36
-
-[INSERT_APPRISS]
-Coordinates=2526,4698,124,58
-
-[cdsPrescriptionsNOGRUPO]
-Coordinates=2977,1816,175,36
-
 [FIXGROUP]
 Coordinates=4672,4698,81,58
-
-[cdsPrescriptionsPS_348_HK]
-Coordinates=2977,1871,179,36
 
 [cdsOTCOTCNUMBER]
 Coordinates=2977,1926,143,36
@@ -2068,9 +1278,6 @@ Coordinates=2977,1981,172,36
 
 [cdsOTCPS_577_G3]
 Coordinates=2977,2036,131,36
-
-[cdsPrescriptionsCOMPDOSAGE_FORM_DESC_CODE]
-Coordinates=2977,2091,332,36
 
 [TIMECARD_TOTALHOURSWORKED]
 Coordinates=1554,4698,232,58
@@ -2087,47 +1294,20 @@ Coordinates=2977,2256,158,36
 [CDSPacientesDEUDA]
 Coordinates=2977,2311,142,36
 
-[cdsPrescriptionsPS_135_UM]
-Coordinates=2977,2366,181,36
-
 [INSERT_LOG]
 Coordinates=4574,4766,95,58
 
 [FDQuery1]
 Coordinates=4156,4766,73,58
 
-[cdsPrescriptionsNUMERORECETA]
-Coordinates=2977,2421,217,36
-
 [cdsInventarioPisoSUB_DEPARTAMENTO]
 Coordinates=2977,2476,256,36
-
-[cdsPrescriptionsOTHERAMOUNTCLAIMEDSUBCOUNT]
-Coordinates=2977,2531,337,36
 
 [EM_UPDATEINV]
 Coordinates=6267,4834,114,58
 
-[cdsPrescriptionsOTHERAMOUNTCLAIMEDSUB]
-Coordinates=2977,2586,292,36
-
-[cdsPrescriptionsDRC_357_NV]
-Coordinates=2977,2641,190,36
-
-[cdsPrescriptionsCOMPROUTE_OF_ADMINISTRATION]
-Coordinates=2977,2696,333,36
-
 [cdsOTCPS_575_EQ]
 Coordinates=2977,2751,132,36
-
-[cdsPrescriptionsADHERENCE]
-Coordinates=2977,2806,189,36
-
-[INSERT_MEZLCA]
-Coordinates=3410,10,120,58
-
-[cdsPrescriptionsORG_PRES_PROD_SIDQ]
-Coordinates=2977,2861,262,36
 
 [cdsOTCPRIMARYCAREPROVIDQUALIFIER]
 Coordinates=2977,2916,271,36
@@ -2135,20 +1315,11 @@ Coordinates=2977,2916,271,36
 [cdsOTCCUPON_NUMBER]
 Coordinates=2977,2971,169,36
 
-[SCANED_RX_LINK]
-Coordinates=7283,4698,128,58
-
 [cdsPriceTableCOSTMULTIPLIER]
 Coordinates=2977,3026,207,36
 
 [cdsOTCPS_512_FC]
 Coordinates=2977,3081,131,36
-
-[cdsPrescriptionsPRIMARYCAREPROVLASTNAME]
-Coordinates=2977,3136,307,36
-
-[NEXTRX_PARATA_NO]
-Coordinates=5027,4834,150,58
 
 [CDSPatPlanNUMEROPLAN]
 Coordinates=2977,3191,176,36
@@ -2156,29 +1327,14 @@ Coordinates=2977,3191,176,36
 [cdsOTCPMCC_458_SE]
 Coordinates=2977,3246,151,36
 
-[RECONCILIATION_ALL]
-Coordinates=3377,4698,153,58
-
 [cdsOTCCUPONTYPE]
 Coordinates=2977,3301,140,36
-
-[REFILL_VALUESD0]
-Coordinates=4278,4834,132,58
 
 [cdsOTCOP_REJECTCOUNT]
 Coordinates=2977,3356,181,36
 
-[APPRISS_VIEW_COMPOUNDS]
-Coordinates=5385,4698,200,58
-
 [cdsInventarioPisoSTRENGTH]
 Coordinates=2977,3411,186,36
-
-[cdsPrescriptionsPRIOR_AUTH_TYPE_CODE]
-Coordinates=2977,3466,275,36
-
-[cdsPrescriptionsSCCD_354_NX]
-Coordinates=2977,3521,198,36
 
 [cdsOTCPS_135_UM]
 Coordinates=2977,3576,133,36
@@ -2192,14 +1348,8 @@ Coordinates=2697,4766,66,58
 [cdsOTCPS_137_UP]
 Coordinates=2977,3686,131,36
 
-[cdsPrescriptionsPATIENTPAIDAMOUNT]
-Coordinates=2977,3741,248,36
-
 [cdsInventarioPisoNONEBC]
 Coordinates=2977,3796,171,36
-
-[cdsPrescriptionsWC_117_TR]
-Coordinates=2977,3851,183,36
 
 [cdsOTCPS_523_FN]
 Coordinates=2977,3906,131,36
@@ -2222,17 +1372,8 @@ Coordinates=2977,4181,206,36
 [cdsInventarioPisoCASA_FARMACEUTICA]
 Coordinates=2977,4236,259,36
 
-[INSERTDOCTOR]
-Coordinates=2943,10,116,58
-
-[cdsPrescriptionsDIAHORA]
-Coordinates=2977,4291,167,36
-
 [cdsOTCWF_STORAGE]
 Coordinates=2977,4346,150,36
-
-[CAMBIAR_MEDICAMENTO]
-Coordinates=4750,4766,175,58
 
 [dsOTC]
 Coordinates=0,0,55,36
@@ -2243,20 +1384,8 @@ Coordinates=5407,4766,304,58
 [cdsOTCIATID_463_EW]
 Coordinates=2977,4401,150,36
 
-[INSERT_OTC]
-Coordinates=7651,10,95,58
-
-[UPDATE_OTC_SIGNATURELINK]
-Coordinates=2338,4766,210,58
-
-[CALC_RXDISPONIBLE_PRESCRIPTION]
-Coordinates=4764,4834,253,58
-
 [cdsOTCPA]
 Coordinates=2977,4456,78,36
-
-[cdsPrescriptionsRELACION]
-Coordinates=2977,4511,174,36
 
 [qOTC2]
 Coordinates=7866,4698,56,58
@@ -2264,20 +1393,11 @@ Coordinates=7866,4698,56,58
 [UPDATE_TIME_STAMP]
 Coordinates=2460,10,155,58
 
-[RX_VIEW_COMPOUNDS]
-Coordinates=3247,4766,163,58
-
 [cdsOTCPS_134_UK]
 Coordinates=2977,4566,131,36
 
-[cdsPrescriptionsLEVELOFSERVICE]
-Coordinates=2977,4621,223,36
-
 [INSERT_PASSWORD_LOG]
 Coordinates=3970,4766,176,58
-
-[cdsPrescriptionsINGREDIENT_COST_PAID]
-Coordinates=2977,4676,267,36
 
 [CANCEL_TABS]
 Coordinates=3848,10,106,58
@@ -2293,9 +1413,6 @@ Coordinates=2977,4786,134,36
 
 [LOGEADOPOS]
 Coordinates=8427,10,104,58
-
-[cdsPrescriptionsORG_PROS_PROD_SERVID]
-Coordinates=2977,4841,280,36
 
 [cdsOTCGANANCIA]
 Coordinates=2977,4896,128,36
@@ -2316,17 +1433,9 @@ Coordinates=2977,5116,159,36
 Coordinates=2977,5171,151,36
 
 []
-Coordinates=5101,10,284,58
+Coordinates=1666,4766,140,58
+Visible=True
 
 [INDEX_INVENTORY]
 Coordinates=1336,10,133,58
-
-[INDEX_OTC_GUID]
-Coordinates=7878,4766,176,58
-
-[INSERT_PRESCRIPTIONS1]
-Coordinates=170,4698,173,58
-
-[SENDTOHISTORY]
-Coordinates=6233,4766,171,58
 
