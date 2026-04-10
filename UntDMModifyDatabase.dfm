@@ -1,7 +1,7 @@
 object DMModifyDatabase: TDMModifyDatabase
   OnCreate = DataModuleCreate
-  Height = 1560
-  Width = 6634
+  Height = 1235
+  Width = 4376
   object SQLQuery1: TFDQuery
     Connection = FDConnection1
     Left = 24
@@ -219,8 +219,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         'EXECUTE INSERT_LOG '#39'Farmatec Backup'#39', '#39'B'#39', '#39#39', '#39#39', '#39#39', 0, 0,0,0,' +
         '0,0,0,0,'#39'R'#39','#39#39',0,1;')
-    Left = 640
-    Top = 32
+    Left = 488
+    Top = 56
   end
   object CALC_HEAD_TOTALS: TFDQuery
     AfterExecute = CALC_HEAD_TOTALSAfterExecute
@@ -377,8 +377,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'#9#9
       #9'commit'
       'END;')
-    Left = 3216
-    Top = 608
+    Left = 1976
+    Top = 624
   end
   object CALC_ORDER_TOTAL: TFDQuery
     AfterExecute = CALC_ORDER_TOTALAfterExecute
@@ -400,8 +400,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ORDERID;'
       '  commit'
       'end')
-    Left = 648
-    Top = 224
+    Left = 496
+    Top = 248
   end
   object CALCRXDISPONIBLE: TFDQuery
     AfterExecute = CALCRXDISPONIBLEAfterExecute
@@ -453,8 +453,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '    DELETE FROM PRINT_QUERIES WHERE ID = @ID'
       '  commit'
       'END')
-    Left = 664
-    Top = 872
+    Left = 336
+    Top = 816
   end
   object DELETE_SCANED_Q: TFDQuery
     AfterExecute = DELETE_SCANED_QAfterExecute
@@ -654,8 +654,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  Where Group_ProductNo = @GPNo;'
       '  commit'
       'end')
-    Left = 848
-    Top = 872
+    Left = 520
+    Top = 816
   end
   object INSERT_ESIGNATURE: TFDQuery
     AfterExecute = INSERT_ESIGNATUREAfterExecute
@@ -732,8 +732,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'Delete from Pick_up where Fecha < GETDATE()-1;'
       '  commit;'
       'END;')
-    Left = 992
-    Top = 56
+    Left = 832
+    Top = 80
   end
   object INSERT_PRINT_Q: TFDQuery
     AfterExecute = INSERT_PRINT_QAfterExecute
@@ -788,8 +788,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'@DELIVERY, @QUOTE, @PRINT_PAT_EDU, @PRINTER_IP);'
       '  commit;'
       'end;')
-    Left = 1008
-    Top = 312
+    Left = 704
+    Top = 288
   end
   object INSERT_TRANS: TFDQuery
     AfterExecute = INSERT_TRANSAfterExecute
@@ -1319,8 +1319,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'US,@TAXABLE, @FECHA_EXPIRACION, @TERMINAESPECIAL, @COMESPECIAL)'
       #9'commit;'
       'end;')
-    Left = 1016
-    Top = 888
+    Left = 688
+    Top = 832
   end
   object INSERTPACIENTE: TFDQuery
     AfterExecute = INSERTPACIENTEAfterExecute
@@ -1397,8 +1397,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #9'  @CONSULTA, @CIUDAD, @FECHANACIMIENTO, @NUMEROCLIENTE, @FECHA_' +
         'HIPPA)'
       '  commit;')
-    Left = 1136
-    Top = 56
+    Left = 832
+    Top = 160
   end
   object INSERTPRODUCT: TFDQuery
     AfterExecute = INSERTPRODUCTAfterExecute
@@ -1458,7 +1458,7 @@ object DMModifyDatabase: TDMModifyDatabase
         '@TXR_EXTENSIONstr, @IMAGE_CODEstr, '#39'R'#39');'
       'commit'
       'end')
-    Left = 1136
+    Left = 672
     Top = 224
   end
   object LAST_IDENTITY: TFDQuery
@@ -1470,8 +1470,8 @@ object DMModifyDatabase: TDMModifyDatabase
       'BEGIN'
       ' SELECT @LASTIDENTITY = @@Identity'
       'END')
-    Left = 1144
-    Top = 312
+    Left = 840
+    Top = 288
   end
   object NEXTBARCODE: TFDQuery
     Connection = FDConnection1
@@ -1484,8 +1484,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  Select @BARCODE_NO = (BARCODE) FROM NEXT_RXNUMBER;'
       '  commit'
       'end')
-    Left = 1152
-    Top = 480
+    Left = 1144
+    Top = 496
   end
   object NEXTINSTANCIA: TFDQuery
     Connection = FDConnection1
@@ -1508,8 +1508,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  end'
       '  commit'
       'end')
-    Left = 1160
-    Top = 560
+    Left = 1152
+    Top = 576
   end
   object NEXTINSTANCIA_SIGNATURE: TFDQuery
     Connection = FDConnection1
@@ -1540,8 +1540,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  end'
       '  commit'
       'end')
-    Left = 1160
-    Top = 640
+    Left = 1152
+    Top = 656
   end
   object TRANSACTIONDETAIL_CANCELTRANS: TFDQuery
     AfterExecute = TRANSACTIONDETAIL_CANCELTRANSAfterExecute
@@ -1573,8 +1573,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'
       #9'commit'
       'END')
-    Left = 1312
-    Top = 720
+    Left = 880
+    Top = 832
   end
   object TRANSACTIONDETAIL_DELETE: TFDQuery
     Connection = FDConnection1
@@ -1616,8 +1616,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  Exec CANCEL_TABS @TNUMBER;'
       '  commit'
       'END;')
-    Left = 1320
-    Top = 800
+    Left = 888
+    Top = 912
   end
   object TRANSACTIONDETAIL_DELETE_PRODUCT: TFDQuery
     Connection = FDConnection1
@@ -1690,8 +1690,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'
       #9'commit'
       'END')
-    Left = 1328
-    Top = 872
+    Left = 896
+    Top = 984
   end
   object TRANSACTIONDETAIL_UPDATEPRICE: TFDQuery
     Connection = FDConnection1
@@ -1754,8 +1754,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'
       #9'commit'
       'END')
-    Left = 1432
-    Top = 64
+    Left = 992
+    Top = 40
   end
   object UPDATE_DEBT: TFDQuery
     Connection = FDConnection1
@@ -1772,8 +1772,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'N;'
       '  COMMIT'
       'end')
-    Left = 1448
-    Top = 144
+    Left = 984
+    Top = 120
   end
   object UPDATE_INVENTORY: TFDQuery
     Connection = FDConnection1
@@ -1791,8 +1791,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'Y where PRODUCTNO = @PRODUCTID;'
       '  commit'
       'end')
-    Left = 1456
-    Top = 224
+    Left = 984
+    Top = 200
   end
   object UPDATE_WC_STATUS: TFDQuery
     AfterExecute = UPDATE_WC_STATUSAfterExecute
@@ -1828,8 +1828,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '= @ID'
       '  commit'
       'END')
-    Left = 1504
-    Top = 904
+    Left = 1080
+    Top = 912
   end
   object WILLCALL_DELETE: TFDQuery
     AfterExecute = WILLCALL_DELETEAfterExecute
@@ -1856,8 +1856,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '    end;'
       '  commit'
       'END')
-    Left = 1808
-    Top = 72
+    Left = 1264
+    Top = 32
   end
   object WILLCALL_History_DELETE: TFDQuery
     Connection = FDConnection1
@@ -1871,8 +1871,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  DELETE FROM WILLCALL_STATUS where RTS = 1'
       '  commit'
       'END')
-    Left = 1800
-    Top = 168
+    Left = 1256
+    Top = 128
   end
   object WILLCALL_TOTAL_AMOUNT_DUE: TFDQuery
     Connection = FDConnection1
@@ -1894,14 +1894,14 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'select @TAmountDue = @TCOPAY + @TCASH;'
       '  commit'
       'end')
-    Left = 1816
-    Top = 240
+    Left = 1272
+    Top = 200
   end
   object FDQuery2: TFDQuery
     Connection = FDConnection1
     OnError = FDQuery2Error
-    Left = 840
-    Top = 96
+    Left = 680
+    Top = 120
   end
   object EXPORTTOWILLCALLHISTORY: TFDQuery
     Connection = FDConnection1
@@ -1930,8 +1930,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'D;'
       '  commit'
       'END')
-    Left = 1824
-    Top = 328
+    Left = 1280
+    Top = 288
   end
   object CREATEWILLCAL_STATUS_LHISTORY: TFDQuery
     Connection = FDConnection1
@@ -1951,8 +1951,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '    FROM inserted'
       '  commit'
       'END')
-    Left = 1832
-    Top = 400
+    Left = 1288
+    Top = 360
   end
   object EXPORTTOWILLCAL_STATUS_LHISTORY: TFDQuery
     Connection = FDConnection1
@@ -2036,8 +2036,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'END;'
       #9'commit'
       'END')
-    Left = 1840
-    Top = 496
+    Left = 1296
+    Top = 456
   end
   object DELETETRANS: TFDQuery
     Connection = FDConnection1
@@ -2055,8 +2055,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'RANS;'
       '  commit'
       'end;')
-    Left = 1840
-    Top = 576
+    Left = 1296
+    Top = 536
   end
   object CALC_TRANSFER_TOTAL: TFDQuery
     Connection = FDConnection1
@@ -2085,8 +2085,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TRANSFERID;'
       '  commit'
       'end')
-    Left = 1840
-    Top = 664
+    Left = 1296
+    Top = 624
   end
   object UPDATE_OTC_WFPRINTED: TFDQuery
     Connection = FDConnection1
@@ -2133,8 +2133,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       '  commit'
       'END;')
-    Left = 1840
-    Top = 736
+    Left = 1296
+    Top = 696
   end
   object ORDER_TOTAL: TFDQuery
     Connection = FDConnection1
@@ -2161,8 +2161,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ' = @ORDERID;'
       #9'commit'
       'END')
-    Left = 1992
-    Top = 80
+    Left = 1296
+    Top = 824
   end
   object INSERTGPID: TFDQuery
     Connection = FDConnection1
@@ -2180,8 +2180,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ' = @PID;'
       'commit;'
       'end;')
-    Left = 2000
-    Top = 160
+    Left = 1304
+    Top = 904
   end
   object AUSPICIO: TFDQuery
     Connection = FDConnection1
@@ -2211,8 +2211,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'IN'
       'CLIENTTRANSACTIONS CLIENTTRANSACTIONS_1 ON'
       '(CLIENTTRANSACTIONS_1.CLIENTNO = PACIENTES_1.NUMEROCLIENTE)')
-    Left = 2000
-    Top = 248
+    Left = 1304
+    Top = 992
   end
   object AUSPICIOTOTAL: TFDQuery
     Connection = FDConnection1
@@ -2227,8 +2227,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #39'0'#39' GROUP BY pacientes.socio, pacientes.apellidopaterno, pacient' +
         'es.apellidomaterno, pacientes.nombre, CLIENTTRANSACTIONS.DATEOFT' +
         'RANS')
-    Left = 2008
-    Top = 336
+    Left = 1312
+    Top = 1080
   end
   object PRODUCTSALES: TFDQuery
     AfterExecute = PRODUCTSALESAfterExecute
@@ -2246,8 +2246,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '  GROUP BY ProdDescription, UPC, ProdDepartment, Suplidor, Fecha' +
         'Venta')
-    Left = 2008
-    Top = 816
+    Left = 1000
+    Top = 304
   end
   object RXDEPT: TFDQuery
     AfterExecute = RXDEPTAfterExecute
@@ -2262,8 +2262,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ENTO, INVENTARIO_1.PRODUCTNO FROM PRESCRIPTIONS PRESCRIPTIONS_1 ' +
         'INNER JOIN INVENTARIOPISO INVENTARIO_1 ON (INVENTARIO_1.PRODUCTN' +
         'O = PRESCRIPTIONS_1.PRODUCT_ID)')
-    Left = 2128
-    Top = 336
+    Left = 1440
+    Top = 40
   end
   object TEMP: TFDQuery
     AfterExecute = TEMPAfterExecute
@@ -2288,8 +2288,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.PLANESMEDICOS ON dbo.OTC.PLAN_MEDIC' +
         'O = dbo.PLANESMEDICOS.ABREVIATURA')
-    Left = 2136
-    Top = 416
+    Left = 1448
+    Top = 120
   end
   object TOTAL_POS_TRANS: TFDQuery
     AfterExecute = TOTAL_POS_TRANSAfterExecute
@@ -2306,8 +2306,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '                         dbo.TRANSACTIONHEADER ON dbo.TRANSACTIO' +
         'NDETAIL.TRANSACTIONNUMBER = dbo.TRANSACTIONHEADER.TRANSACTIONNUM' +
         'BER')
-    Left = 2144
-    Top = 504
+    Left = 1456
+    Top = 208
   end
   object VERTRANSACCIONES: TFDQuery
     AfterExecute = VERTRANSACCIONESAfterExecute
@@ -2340,8 +2340,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.TRANSACTIONDETAIL AS TD ON TD.TRANS' +
         'ACTIONNUMBER = TH.TRANSACTIONNUMBER')
-    Left = 2152
-    Top = 600
+    Left = 1464
+    Top = 304
   end
   object DSPacientes: TDataSource
     AutoEdit = False
@@ -2583,6 +2583,7 @@ object DMModifyDatabase: TDMModifyDatabase
     Top = 96
   end
   object FDTransaction1: TFDTransaction
+    Connection = FDConnection1
     Left = 216
     Top = 24
   end
@@ -2609,8 +2610,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'BER;    '
       '  commit'
       'end;')
-    Left = 2152
-    Top = 744
+    Left = 1464
+    Top = 392
   end
   object Index_NCPATNAME: TFDQuery
     AfterExecute = Index_NCPATNAMEAfterExecute
@@ -2625,8 +2626,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ')WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TE' +
         'MPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS =' +
         ' ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]')
-    Left = 504
-    Top = 888
+    Left = 496
+    Top = 656
   end
   object INDEX_INVENTORY: TFDQuery
     Connection = FDConnection1
@@ -2657,8 +2658,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS =' +
         ' ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]'
       ';')
-    Left = 376
-    Top = 856
+    Left = 384
+    Top = 728
   end
   object TRANSACTIONDETAIL_UPDATEPRICE_MOBILE: TFDQuery
     AfterExecute = TRANSACTIONDETAIL_UPDATEPRICE_MOBILEAfterExecute
@@ -2789,8 +2790,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       '  commit;'
       'END;')
-    Left = 496
-    Top = 552
+    Left = 488
+    Top = 320
   end
   object STARTBANK: TFDQuery
     AfterExecute = STARTBANKAfterExecute
@@ -2827,8 +2828,8 @@ object DMModifyDatabase: TDMModifyDatabase
       ''
       '  COMMIT'
       'END;')
-    Left = 496
-    Top = 648
+    Left = 488
+    Top = 416
   end
   object GETNEWHEADER: TFDQuery
     AfterExecute = GETNEWHEADERAfterExecute
@@ -2850,8 +2851,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '     set @TRANSNO = SCOPE_IDENTITY();'
       '  COMMIT'
       'END;;')
-    Left = 496
-    Top = 736
+    Left = 488
+    Top = 504
   end
   object INSERT_ESIGNATURE_PICTURE: TFDQuery
     AfterExecute = INSERT_ESIGNATURE_PICTUREAfterExecute
@@ -2885,8 +2886,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '           @PICKEDUP_ID);'
       '  commit '
       'END;')
-    Left = 496
-    Top = 808
+    Left = 488
+    Top = 576
   end
   object RXTEMP1: TFDQuery
     Connection = FDConnection1
@@ -3191,14 +3192,14 @@ object DMModifyDatabase: TDMModifyDatabase
       '  CLOSE MyCursor'
       '  DEALLOCATE MyCursor    '
       'END')
-    Left = 1992
-    Top = 16
+    Left = 1296
+    Top = 760
   end
   object FDQuery1: TFDQuery
     Connection = FDConnection1
     OnError = FDQuery1Error
-    Left = 1216
-    Top = 488
+    Left = 1008
+    Top = 400
   end
   object UPDATE_OTC_WFCASHIER: TFDQuery
     AfterExecute = UPDATE_OTC_WFCASHIERAfterExecute
@@ -3216,8 +3217,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ' OTCNUMBER = @OTCNUMBER;'
       '  COMMIT;'
       'END')
-    Left = 2296
-    Top = 280
+    Left = 1472
+    Top = 744
   end
   object INSERT_LOG: TFDQuery
     AfterExecute = INSERT_LOGAfterExecute
@@ -3259,8 +3260,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'POS_RX,@NOTE,@CONTROLLED, @SUCCESSFUL) '
       '  COMMIT'
       'END')
-    Left = 2312
-    Top = 424
+    Left = 1480
+    Top = 584
   end
   object EDIT_INVENTORY: TFDQuery
     AfterExecute = EDIT_INVENTORYAfterExecute
@@ -3556,8 +3557,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  end;'
       '  commit;'
       'END;')
-    Left = 2496
-    Top = 264
+    Left = 1592
+    Top = 56
   end
   object INVENTORY_CONTROL: TFDQuery
     AfterExecute = INVENTORY_CONTROLAfterExecute
@@ -3794,8 +3795,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '     END;'
       '  commit'
       'end;')
-    Left = 2320
-    Top = 736
+    Left = 1480
+    Top = 496
   end
   object PATIENT_SEARCH: TFDQuery
     AfterExecute = PATIENT_SEARCHAfterExecute
@@ -3917,8 +3918,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  END;'
       '  COMMIT;'
       'END;')
-    Left = 2504
-    Top = 352
+    Left = 1600
+    Top = 144
   end
   object QCreateBackupDB: TFDQuery
     AfterExecute = QCreateBackupDBAfterExecute
@@ -3928,8 +3929,8 @@ object DMModifyDatabase: TDMModifyDatabase
       'begin'
       '  CREATE DATABASE "Backup";'
       'end;')
-    Left = 2504
-    Top = 560
+    Left = 1624
+    Top = 376
   end
   object FDConnectionBackup: TFDConnection
     Params.Strings = (
@@ -3942,8 +3943,8 @@ object DMModifyDatabase: TDMModifyDatabase
       'Database=BACKUP'
       'DriverID=MSSQL')
     LoginPrompt = False
-    Left = 2488
-    Top = 440
+    Left = 1608
+    Top = 232
   end
   object CLONE_PRODUCT: TFDQuery
     AfterExecute = CLONE_PRODUCTAfterExecute
@@ -4131,8 +4132,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9#9'set @PRODUCTID = SCOPE_IDENTITY();'
       '  COMMIT; '
       'END;')
-    Left = 2680
-    Top = 352
+    Left = 1464
+    Top = 1048
   end
   object RXDATA: TFDQuery
     Connection = FDConnection1
@@ -4390,8 +4391,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.PACIENTES ON dbo.PRESCRIPTIONS.NUME' +
         'ROCLIENTE = dbo.PACIENTES.NUMEROCLIENTE')
-    Left = 664
-    Top = 952
+    Left = 208
+    Top = 824
   end
   object LOGEADOPOS: TFDQuery
     Connection = FDConnection1
@@ -4426,8 +4427,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.ORDER_HEADER ON dbo.ORDER_DETAIL.OR' +
         'DERID = dbo.ORDER_HEADER.ORDERID')
-    Left = 2680
-    Top = 632
+    Left = 1464
+    Top = 832
   end
   object qInventarioPiso: TFDQuery
     Connection = FDConnection1
@@ -4905,8 +4906,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'USER, @PHARMACIST, @NORX, @OTCNUMBER,0,0,0,0,0,0,'#39'R'#39','#39#39',0,1;'
       '    commit;'
       'END')
-    Left = 2704
-    Top = 760
+    Left = 1472
+    Top = 928
   end
   object cdsOTC: TClientDataSet
     Aggregates = <>
@@ -5993,14 +5994,15 @@ object DMModifyDatabase: TDMModifyDatabase
       'DECLARE @TRIPLES_ReadT_PT2 FLOAT'
       'DECLARE @PayPal_read FLOAT'
       'DECLARE @PayPal_read_PT2 FLOAT '
+      'DECLARE @Coupon Decimal(18, 2)'
       'BEGIN'
       '-- SET NOCOUNT ON added to prevent extra result sets from'
       '-- interfering with SELECT statements.'
       'SET NOCOUNT ON;'
       #9'begin transaction;'
       
-        #9#9'--elect @EMPLOYEENUMBER = EMPLOYNUMBER, @REGISTER = REGISTER F' +
-        'ROM DAILYTOTALS WHERE ID = @ID;'
+        #9#9'--select @EMPLOYEENUMBER = EMPLOYNUMBER, @REGISTER = REGISTER ' +
+        'FROM DAILYTOTALS WHERE ID = @ID;'
       
         #9#9'SELECT @TTIP = ISNULL(sum(TOTAL_TIP), 0) From TransactionHeade' +
         'r Where (CONVERT(VARCHAR(10), TRANSACTIONDATE,101) = @TRANSACTIO' +
@@ -6170,6 +6172,9 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9#9#9'AND (transactionheader.Register = @REGISTER)'
       #9#9#9#9'AND (transactionheader.ID = @TRANS_HEAD_ID));'
       
+        #9#9'select @Coupon = ISNULL(COUPONREAD, 0) From DAILYTOTALS where ' +
+        'ID = @TRANS_HEAD_ID;'
+      
         #9#9'SELECT @TAX_MUNICIPAL = ISNULL(sum(TAX), 0)  From TransactionH' +
         'eader Where (CONVERT(VARCHAR(10), TRANSACTIONDATE,101) = @TRANSA' +
         'CTIONDATE) AND (Voided = 0) AND (Voided = 0) AND (ID = @TRANS_HE' +
@@ -6203,7 +6208,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'PAYPAlREAD = PAYPALREAD + @PayPal_read + @PayPal_read_PT2,'
       
         #9#9'OTHERCOUNT = OTHERCOUNT + @OTHERCOUNT + @OTHERCOUNT_PT2, UTILI' +
-        'TYREAD = UTILITYREAD + @UtilityRead, '
+        'TYREAD = UTILITYREAD + @UtilityRead, COUPONREAD = COUPONREAD + @' +
+        'COUPON, '
       
         #9#9'TOTAL_READ = TOTAL_READ + (ISNULL(@CASHREAD,0)) + ISNULL(@Cash' +
         'Read_PT2,0) + '
@@ -6211,7 +6217,7 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'(ISNULL(@TRIPLES_Read,0)) + (ISNULL(@TRIPLES_ReadT_PT2,0)) +'
       #9#9'(ISNULL(@PayPal_read,0)) + (ISNULL(@PayPal_read_PT2,0)) +'
       #9#9'(ISNULL(@CCARDREAD,0)) + (ISNULL(@CHECKREAD,0)) + '
-      #9#9'(ISNULL(@WICREAD,0)), '
+      #9#9'(ISNULL(@WICREAD,0)) - (ISNULL(@PayOutRead,0)), '
       
         #9#9'TOTAL_COUNT = TOTAL_COUNT + (((ISNULL(CASHCOUNT,0)) + (ISNULL(' +
         'ATHCOUNT,0)) + (ISNULL(PAYPALCOUNT,0)) + (ISNULL(CCARDCOUNT,0)) ' +
@@ -6229,8 +6235,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'D where id = @TRANS_HEAD_ID;'
       #9'commit;'
       'END;')
-    Left = 3192
-    Top = 288
+    Left = 1952
+    Top = 304
   end
   object UPDATE_PATIENT_NOTIFICATIONS: TFDQuery
     AfterExecute = UPDATE_PATIENT_NOTIFICATIONSAfterExecute
@@ -6265,8 +6271,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'IDAPOR,  @PHARMACIST, 0, 0,0,@NUMEROCLIENTE,0,0,0,0,'#39'R'#39','#39#39',0,1;'
       '  commit;'
       'end;')
-    Left = 2824
-    Top = 560
+    Left = 1640
+    Top = 648
   end
   object qClaims: TFDQuery
     Connection = FDConnection1
@@ -6335,8 +6341,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'R = @TN;'
       '  commit'
       'end')
-    Left = 3016
-    Top = 304
+    Left = 1768
+    Top = 64
   end
   object CLOSE_BALANCE: TFDQuery
     AfterExecute = CLOSE_BALANCEAfterExecute
@@ -6354,8 +6360,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #39' WHERE ID = @ID; '
       '  COMMIT;'
       'END')
-    Left = 3024
-    Top = 384
+    Left = 1776
+    Top = 144
   end
   object INSERT_PASSWORD_LOG: TFDQuery
     AfterExecute = INSERT_PASSWORD_LOGAfterExecute
@@ -6372,8 +6378,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  VALUES (@USERNAME, @PASSWORD_COL, GETDATE()); '
       '  COMMIT'
       'END')
-    Left = 3040
-    Top = 464
+    Left = 1792
+    Top = 224
   end
   object TIME_STAMP: TFDQuery
     AfterExecute = TIME_STAMPAfterExecute
@@ -6438,8 +6444,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'END')
-    Left = 3232
-    Top = 856
+    Left = 1992
+    Top = 872
   end
   object UPDATE_TH_BALANCE: TFDQuery
     AfterExecute = UPDATE_TH_BALANCEAfterExecute
@@ -6471,8 +6477,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'D = @GROUP_BY_ID WHERE ID = @ID;'
       #9'commit;'
       'END;')
-    Left = 3040
-    Top = 616
+    Left = 1792
+    Top = 312
   end
   object UPDATE_TH_BALANCE_DEL: TFDQuery
     AfterExecute = UPDATE_TH_BALANCE_DELAfterExecute
@@ -6498,8 +6504,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '_ID = @GROUP_BY_ID;'
       #9'commit;'
       'END;')
-    Left = 3040
-    Top = 704
+    Left = 1792
+    Top = 400
   end
   object OPEN_TABS: TFDQuery
     AfterExecute = OPEN_TABSAfterExecute
@@ -6524,8 +6530,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.TABS_DETAIL ON dbo.TABS_HEADER.ID =' +
         ' dbo.TABS_DETAIL.TABS_ID')
-    Left = 3040
-    Top = 784
+    Left = 1792
+    Top = 480
   end
   object CALC_TAB_BALANCE: TFDQuery
     AfterExecute = CALC_TAB_BALANCEAfterExecute
@@ -6549,8 +6555,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'D;'
       #9'commit;'
       'END')
-    Left = 3040
-    Top = 864
+    Left = 1792
+    Top = 560
   end
   object CANCEL_TABS: TFDQuery
     AfterExecute = CANCEL_TABSAfterExecute
@@ -6614,8 +6620,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'D CONVERT(varchar, date, 101) < GETDATE() AND ID = @ID;'
       '  commit;'
       'END;')
-    Left = 3176
-    Top = 56
+    Left = 1936
+    Top = 72
   end
   object NEXT_MAIN_COURSE_ID: TFDQuery
     AfterExecute = NEXT_MAIN_COURSE_IDAfterExecute
@@ -6629,8 +6635,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  Select @ID = (MAIN_COURSE_ID) FROM NEXT_RXNUMBER;'
       '  commit'
       'end')
-    Left = 3184
-    Top = 120
+    Left = 1944
+    Top = 136
   end
   object POS_INVENTORY_CONTROL: TFDQuery
     AfterExecute = POS_INVENTORY_CONTROLAfterExecute
@@ -6697,8 +6703,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '    DEALLOCATE MyCursor'
       #9'commit;'
       'END')
-    Left = 3192
-    Top = 208
+    Left = 1952
+    Top = 224
   end
   object CALC_DAILYTOTALS_READ_REST: TFDQuery
     AfterExecute = CALC_DAILYTOTALS_READ_RESTAfterExecute
@@ -6746,7 +6752,7 @@ object DMModifyDatabase: TDMModifyDatabase
       'DECLARE @TRIPLES_ReadT_PT2 FLOAT'
       'DECLARE @PayPal_read FLOAT'
       'DECLARE @PayPal_read_PT2 FLOAT '
-      'DECLARE @Coupon FLOAT'
+      'DECLARE @Coupon decimal(18, 2)'
       'BEGIN'
       '-- SET NOCOUNT ON added to prevent extra result sets from'
       '-- interfering with SELECT statements.'
@@ -6954,26 +6960,23 @@ object DMModifyDatabase: TDMModifyDatabase
       
         #9#9'OTHERCOUNT = @OTHERCOUNT + @OTHERCOUNT_PT2, UTILITYREAD = @Uti' +
         'lityReadCASH + @UtilityReadATH, UTILITY_CASH_READ = @UtilityRead' +
-        'CASH, COUPONREAD = @Coupon,'
+        'CASH, COUPONREAD = abs(@Coupon),'
       
         #9#9'PAYPALREAD = @PayPal_read + @PayOutRead_PT2, CASHBACK = @CASHB' +
         'ACK,'
       
-        #9#9'TOTAL_READ =  Cast((ISNULL(@CASHREAD,0)) + ISNULL(@CashRead_PT' +
-        '2,0) + '
+        #9#9'TOTAL_READ =  Cast((ISNULL(@CASHREAD,0)) + (ISNULL(@CashRead_P' +
+        'T2,0)) + '
       
         #9#9'              (ISNULL(@ATHREAD,0)) + (ISNULL(@ATHRead_PT2,0)) ' +
         '+ '
       #9#9#9#9#9'  (ISNULL(@ATHMREAD,0)) + (ISNULL(@ATHMRead_PT2,0)) + '
       #9#9#9#9#9'  (ISNULL(@CCARDREAD,0)) + (ISNULL(@CCardRead_PT2,0)) +'
       #9#9#9#9#9'  (ISNULL(@CHECKREAD,0)) + (ISNULL(@CheckRead_PT2,0)) +'
-      #9#9#9#9#9'  (ISNULL(@TRIPLES_Read,0) + (ISNULL(@CheckRead_PT2,0)) +'
+      #9#9#9#9#9'  (ISNULL(@TRIPLES_Read,0)) + (ISNULL(@CheckRead_PT2,0)) +'
       #9#9#9#9#9'  (ISNULL(@WICREAD,0)) + (ISNULL(@TRIPLES_ReadT_PT2,0)) + '
-      #9#9#9#9#9'  (ISNULL(@PayPal_read,0)) + (ISNULL(@PayPal_read_PT2,0))) '
-      #9#9#9#9#9'  - '
-      
-        #9#9#9#9#9'  (ISNULL(@PayOutRead,0) - @Coupon + @CASHBACK) as decimal(' +
-        '18,2)),'
+      #9#9#9#9#9'  (ISNULL(@PayPal_read,0)) + (ISNULL(@PayPal_read_PT2,0)) -'
+      #9#9#9#9#9'  (ISNULL(@PayOutRead,0) + @CASHBACK) as decimal(18,2)),'
       #9#9#9#9#9'   '
       
         #9#9'TOTAL_COUNT = CAST(isNull(cashcount,0) + isNull(TRIPLESREAD,0)' +
@@ -6991,8 +6994,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'Where ID = @ID;'
       #9'commit;'
       'END;')
-    Left = 3192
-    Top = 360
+    Left = 1952
+    Top = 376
   end
   object CALC_HEAD_TOTALS_DEL_TRIG: TFDQuery
     AfterExecute = CALC_HEAD_TOTALS_DEL_TRIGAfterExecute
@@ -7149,8 +7152,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'UMBER = @INTRANS;'
       #9'commit;'
       'end;')
-    Left = 3208
-    Top = 472
+    Left = 1968
+    Top = 488
   end
   object CALC_HEAD_TOTALS_TRIG: TFDQuery
     AfterExecute = CALC_HEAD_TOTALS_TRIGAfterExecute
@@ -7308,8 +7311,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'UMBER = @INTRANS;'
       #9'commit;'
       'end;')
-    Left = 3208
-    Top = 544
+    Left = 1968
+    Top = 560
   end
   object INSERT_NEWTAB: TFDQuery
     AfterExecute = INSERT_NEWTABAfterExecute
@@ -7372,8 +7375,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TRANNO, GETDATE(), @LASTIDENTITY);'#9
       #9'commit;'
       'END;')
-    Left = 3216
-    Top = 680
+    Left = 1976
+    Top = 696
   end
   object UPDATE_TIME_STAMP: TFDQuery
     AfterExecute = UPDATE_TIME_STAMPAfterExecute
@@ -7424,8 +7427,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end'
       #9'commit;'
       'END')
-    Left = 3224
-    Top = 776
+    Left = 1984
+    Top = 792
   end
   object HOLD_SAVE_TRANSACTION: TFDQuery
     AfterExecute = HOLD_SAVE_TRANSACTIONAfterExecute
@@ -7480,8 +7483,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '@TRANNO;'
       #9'commit tran;'
       'END')
-    Left = 3232
-    Top = 928
+    Left = 1992
+    Top = 944
   end
   object POS_DELETE_OPEN_TRANSACTIONS: TFDQuery
     AfterExecute = POS_DELETE_OPEN_TRANSACTIONSAfterExecute
@@ -7532,8 +7535,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'DEALLOCATE MyCursor'
       #9'COMMIT'
       'END;')
-    Left = 3240
-    Top = 1016
+    Left = 2000
+    Top = 1032
   end
   object TIMECARD_TOTALHOURSWORKED: TFDQuery
     AfterExecute = TIMECARD_TOTALHOURSWORKEDAfterExecute
@@ -7602,8 +7605,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'END')
-    Left = 3224
-    Top = 712
+    Left = 1984
+    Top = 728
   end
   object UPDATE_TRANSACTION_HEADER: TFDQuery
     AfterExecute = UPDATE_TRANSACTION_HEADERAfterExecute
@@ -7735,8 +7738,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'#9
       #9'COMMIT TRANSACTION;'
       'END;')
-    Left = 3240
-    Top = 1096
+    Left = 2000
+    Top = 1112
   end
   object PRICE_UPDATE: TFDQuery
     AfterExecute = PRICE_UPDATEAfterExecute
@@ -7794,8 +7797,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'  end;'
       #9'COMMIT;'
       'END;')
-    Left = 3352
-    Top = 64
+    Left = 2112
+    Top = 80
   end
   object POS_INSERT_EDIT_INVENTORY: TFDQuery
     AfterExecute = POS_INSERT_EDIT_INVENTORYAfterExecute
@@ -7984,8 +7987,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '        ON I.GROUP_PRODUCTNO = G.GROUP_PRODUCTNO;  */'
       #9'commit;'
       'END;')
-    Left = 3368
-    Top = 160
+    Left = 2128
+    Top = 176
   end
   object CAL_BALANCE_TEMP: TFDQuery
     AfterExecute = CAL_BALANCE_TEMPAfterExecute
@@ -8038,8 +8041,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ';'
       '  COMMIT'
       'end;')
-    Left = 3384
-    Top = 264
+    Left = 2144
+    Top = 280
   end
   object CALC_BALANCE_DELETE: TFDQuery
     AfterExecute = CALC_BALANCE_DELETEAfterExecute
@@ -8093,8 +8096,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ';'
       '  COMMIT'
       'end;')
-    Left = 3376
-    Top = 392
+    Left = 2136
+    Top = 408
   end
   object CALC_BALANCE: TFDQuery
     AfterExecute = CALC_BALANCEAfterExecute
@@ -8148,8 +8151,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ';'
       '  COMMIT'
       'end;')
-    Left = 3376
-    Top = 480
+    Left = 2136
+    Top = 496
   end
   object POS_CANCEL_TRANS: TFDQuery
     AfterExecute = POS_CANCEL_TRANSAfterExecute
@@ -8259,8 +8262,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'COMMIT;'
       'END;')
-    Left = 3376
-    Top = 584
+    Left = 2136
+    Top = 600
   end
   object PATIENT_HIPPA_ORIENTED: TFDQuery
     AfterExecute = PATIENT_HIPPA_ORIENTEDAfterExecute
@@ -8277,8 +8280,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'COMMIT;'
       ''
       'END')
-    Left = 3384
-    Top = 656
+    Left = 2144
+    Top = 672
   end
   object POS_RECALL_TRANSACTION: TFDQuery
     AfterExecute = POS_RECALL_TRANSACTIONAfterExecute
@@ -8302,8 +8305,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ster = @REGISTER  Where TransactionNumber = @TRANSNO;'
       #9'COMMIT TRANSACTION;'
       'END')
-    Left = 3384
-    Top = 728
+    Left = 2144
+    Top = 744
   end
   object POS_SPLIT_TAB: TFDQuery
     AfterExecute = POS_SPLIT_TABAfterExecute
@@ -8336,8 +8339,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'END')
-    Left = 3384
-    Top = 808
+    Left = 2144
+    Top = 824
   end
   object POST_SHOPPER: TFDQuery
     AfterExecute = POST_SHOPPERAfterExecute
@@ -8374,8 +8377,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'UPDATE SHOPPER_HEADER SET ACTIVE = 1 WHERE ID = @ID;'
       #9'COMMIT'
       'END')
-    Left = 3552
-    Top = 480
+    Left = 1632
+    Top = 840
   end
   object CALC_CHANGE: TFDQuery
     AfterExecute = CALC_CHANGEAfterExecute
@@ -8427,8 +8430,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'END')
-    Left = 3392
-    Top = 888
+    Left = 2152
+    Top = 904
   end
   object POS_INSERT_BUTTON_IMAGE: TFDQuery
     AfterExecute = POS_INSERT_BUTTON_IMAGEAfterExecute
@@ -8446,8 +8449,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '_NUMBER = @BUTTON_NUMBER;'
       '  commit '
       'END')
-    Left = 3392
-    Top = 984
+    Left = 2152
+    Top = 1000
   end
   object POS_UPDATE_PRINTED: TFDQuery
     AfterExecute = POS_UPDATE_PRINTEDAfterExecute
@@ -8463,8 +8466,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'NUMBER = @TRANSNO;'
       #9'COMMIT;'
       'END')
-    Left = 3560
-    Top = 72
+    Left = 2344
+    Top = 96
   end
   object POS_INSERT_DAILYTOTALS: TFDQuery
     AfterExecute = POS_INSERT_DAILYTOTALSAfterExecute
@@ -8505,8 +8508,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'set @DTCurrent_Identity = SCOPE_IDENTITY();'
       #9'COMMIT'
       'END;')
-    Left = 3552
-    Top = 168
+    Left = 2336
+    Top = 192
   end
   object POS_UPDATE_PAYMENTTYPE: TFDQuery
     AfterExecute = POS_UPDATE_PAYMENTTYPEAfterExecute
@@ -8529,8 +8532,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ' TRANSACTIONNUMBER = @TRANSNO; '
       '    commit;'
       'END')
-    Left = 3552
-    Top = 256
+    Left = 2336
+    Top = 280
   end
   object POST_SHOPPER_DAILY: TFDQuery
     AfterExecute = POST_SHOPPER_DAILYAfterExecute
@@ -8568,8 +8571,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '@ID;'
       #9'COMMIT'
       'END')
-    Left = 3560
-    Top = 392
+    Left = 1640
+    Top = 752
   end
   object VIP: TFDQuery
     AfterExecute = VIPAfterExecute
@@ -8592,8 +8595,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.CLIENTTRANSACTIONS ON dbo.PACIENTES' +
         '.NUMEROCLIENTE = dbo.CLIENTTRANSACTIONS.CLIENTNO')
-    Left = 3552
-    Top = 576
+    Left = 1632
+    Top = 936
   end
   object ADD_EDIT_PACIENTES: TFDQuery
     AfterExecute = ADD_EDIT_PACIENTESAfterExecute
@@ -8849,13 +8852,13 @@ object DMModifyDatabase: TDMModifyDatabase
         '@NUMEROCLIENTE,0,0,0,0,'#39'R'#39',@NOTE,0,1;'
       #9#9'  COMMIT;'
       'END;')
-    Left = 3648
-    Top = 488
+    Left = 1800
+    Top = 680
   end
   object FDQueryBackup: TFDQuery
     Connection = FDConnectionBackup
-    Left = 2560
-    Top = 504
+    Left = 1616
+    Top = 296
   end
   object POS_HOLD_TRANS: TFDQuery
     AfterExecute = POS_HOLD_TRANSAfterExecute
@@ -8898,8 +8901,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'Select @TransNo = @TN;'
       #9'COMMIT TRANSACTION;'
       'END')
-    Left = 3640
-    Top = 680
+    Left = 1808
+    Top = 840
   end
   object POS_ROUND_TOTAL: TFDQuery
     AfterExecute = POS_ROUND_TOTALAfterExecute
@@ -8928,8 +8931,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'SELECT @Round5 = CEILING(@AMOUNT/@RoundUp)*@RoundUp'
       ''
       'END')
-    Left = 3640
-    Top = 760
+    Left = 1808
+    Top = 920
   end
   object CALC_COMMISSION: TFDQuery
     AfterExecute = CALC_COMMISSIONAfterExecute
@@ -8982,8 +8985,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'Return @COMMISSION_VALUE'
       'END')
-    Left = 3824
-    Top = 72
+    Left = 2176
+    Top = 1088
   end
   object Reindex: TFDQuery
     AfterExecute = ReindexAfterExecute
@@ -8993,8 +8996,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'EXEC sp_MSforeachtable @command1="print '#39'?'#39' DBCC DBREINDEX ('#39'?'#39',' +
         ' '#39' '#39', 80)";'
       'EXEC sp_updatestats;')
-    Left = 3688
-    Top = 72
+    Left = 2472
+    Top = 96
   end
   object POS_TFAM_CALC: TFDQuery
     AfterExecute = POS_TFAM_CALCAfterExecute
@@ -9021,14 +9024,14 @@ object DMModifyDatabase: TDMModifyDatabase
         'e Food = '#39'F'#39'  and TransactionNumber = @TRANSNO'
       '    commit'
       'END')
-    Left = 3704
-    Top = 136
+    Left = 2488
+    Top = 160
   end
   object FDQuery3: TFDQuery
     Connection = FDConnection1
     OnError = FDQuery3Error
-    Left = 2024
-    Top = 592
+    Left = 1120
+    Top = 408
   end
   object NEXT_ID: TFDQuery
     AfterExecute = NEXT_IDAfterExecute
@@ -9116,8 +9119,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  end;'
       '  commit'
       'end;')
-    Left = 3648
-    Top = 600
+    Left = 1808
+    Top = 760
   end
   object WF_UPDATE: TFDQuery
     AfterExecute = WF_UPDATEAfterExecute
@@ -9213,8 +9216,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'#9
       #9'COMMIT'
       'END;')
-    Left = 4184
-    Top = 1120
+    Left = 2768
+    Top = 888
   end
   object EDIT_DAILYTOTALS: TFDQuery
     AfterExecute = EDIT_DAILYTOTALSAfterExecute
@@ -9269,8 +9272,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '           where ID = @ID;'
       '  commit transaction;'
       'end;')
-    Left = 3912
-    Top = 584
+    Left = 2336
+    Top = 392
   end
   object ADD_EDIT_USERS_POS: TFDQuery
     AfterExecute = ADD_EDIT_USERS_POSAfterExecute
@@ -9437,8 +9440,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'end;')
-    Left = 3912
-    Top = 672
+    Left = 2336
+    Top = 464
   end
   object INSERT_SCANNED_DOC: TFDQuery
     AfterExecute = INSERT_SCANNED_DOCAfterExecute
@@ -9473,14 +9476,14 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'    @CUSTOMERNUMBER);'
       '  commit '
       'END')
-    Left = 3712
-    Top = 240
+    Left = 2496
+    Top = 264
   end
   object FDQuery4: TFDQuery
     Connection = FDConnection1
     OnError = FDQuery4Error
-    Left = 2304
-    Top = 520
+    Left = 1480
+    Top = 664
   end
   object TRANSFER_PROD: TFDQuery
     AfterExecute = TRANSFER_PRODAfterExecute
@@ -9503,8 +9506,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 3856
-    Top = 136
+    Left = 2344
+    Top = 1000
   end
   object TRANSFER_DETAIL: TFDQuery
     Connection = FDConnection1
@@ -9546,8 +9549,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 3848
-    Top = 216
+    Left = 2344
+    Top = 688
   end
   object TRANSFER_HEADER: TFDQuery
     Connection = FDConnection1
@@ -9575,8 +9578,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 3848
-    Top = 288
+    Left = 2344
+    Top = 760
   end
   object TRANSFERED_PRODUCTS: TFDQuery
     Connection = FDConnection1
@@ -9681,8 +9684,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'NSFERE__OVERR__1F0ADBF3]  DEFAULT ((0)) FOR [OVERRIDE_SYSTEM_DEF' +
         'AULT_PRICE]'
       'END;')
-    Left = 3848
-    Top = 360
+    Left = 2344
+    Top = 832
   end
   object POS_ADD_EDIT_CLIENTES: TFDQuery
     AfterExecute = POS_ADD_EDIT_CLIENTESAfterExecute
@@ -9773,8 +9776,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9#9'END;'
       #9#9'  COMMIT;'
       'END;')
-    Left = 3848
-    Top = 448
+    Left = 2344
+    Top = 920
   end
   object LOCK_UNLOCK: TFDQuery
     AfterExecute = LOCK_UNLOCKAfterExecute
@@ -9806,8 +9809,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'END;'
       '  commit;'
       'END')
-    Left = 3776
-    Top = 776
+    Left = 1800
+    Top = 1024
   end
   object LOCK_UNLOCK_DEL: TFDQuery
     AfterExecute = LOCK_UNLOCK_DELAfterExecute
@@ -9833,8 +9836,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'EROCLIENTE = @NO_CLIENTE;'
       '  commit;'
       'END')
-    Left = 3776
-    Top = 856
+    Left = 1624
+    Top = 1024
   end
   object INSERT_PRINT_QUERIES: TFDQuery
     AfterExecute = INSERT_PRINT_QUERIESAfterExecute
@@ -9866,32 +9869,32 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit'
       'end;')
-    Left = 640
-    Top = 104
+    Left = 488
+    Top = 128
   end
   object qObjects: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
       'SELECT NAME FROM sys.objects')
-    Left = 4736
-    Top = 72
+    Left = 2504
+    Top = 368
   end
   object dspObjects: TDataSetProvider
     DataSet = qObjects
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4816
-    Top = 72
+    Left = 2584
+    Top = 368
   end
   object dsObjects: TDataSource
-    Left = 4896
-    Top = 72
+    Left = 2664
+    Top = 368
   end
   object cdsObjects: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspObjects'
-    Left = 4968
-    Top = 72
+    Left = 2736
+    Top = 368
     object cdsObjectsNAME: TWideStringField
       FieldName = 'NAME'
       Required = True
@@ -9903,21 +9906,21 @@ object DMModifyDatabase: TDMModifyDatabase
     SQL.Strings = (
       'SELECT * FROM sys.procedures '
       'where is_ms_shipped = 0;')
-    Left = 4736
-    Top = 152
+    Left = 2504
+    Top = 448
   end
   object dspProcedures: TDataSetProvider
     DataSet = qProcedures
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4824
-    Top = 152
+    Left = 2592
+    Top = 448
   end
   object cdsProcedures: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspProcedures'
-    Left = 4976
-    Top = 152
+    Left = 2744
+    Top = 448
     object cdsProceduresname: TWideStringField
       FieldName = 'name'
       Required = True
@@ -9991,8 +9994,8 @@ object DMModifyDatabase: TDMModifyDatabase
   end
   object dsProcedures: TDataSource
     DataSet = cdsProcedures
-    Left = 4896
-    Top = 152
+    Left = 2664
+    Top = 448
   end
   object qTriggers: TFDQuery
     Connection = FDConnection1
@@ -10004,21 +10007,21 @@ object DMModifyDatabase: TDMModifyDatabase
       '    sys.triggers  '
       'WHERE '
       '    type = '#39'TR'#39';')
-    Left = 4736
-    Top = 240
+    Left = 2504
+    Top = 536
   end
   object dspTriggers: TDataSetProvider
     DataSet = qTriggers
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4824
-    Top = 240
+    Left = 2592
+    Top = 536
   end
   object cdsTriggers: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspTriggers'
-    Left = 4984
-    Top = 240
+    Left = 2752
+    Top = 536
     object cdsTriggersname: TWideStringField
       FieldName = 'name'
       Required = True
@@ -10032,8 +10035,8 @@ object DMModifyDatabase: TDMModifyDatabase
   end
   object dsTriggers: TDataSource
     DataSet = cdsTriggers
-    Left = 4896
-    Top = 240
+    Left = 2664
+    Top = 536
   end
   object qViews: TFDQuery
     Connection = FDConnection1
@@ -10044,26 +10047,26 @@ object DMModifyDatabase: TDMModifyDatabase
       '    sys.views  '
       'WHERE '
       '    is_ms_shipped = 0;')
-    Left = 4744
-    Top = 328
+    Left = 2512
+    Top = 624
   end
   object dspViews: TDataSetProvider
     DataSet = qViews
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4824
-    Top = 328
+    Left = 2592
+    Top = 624
   end
   object dsViews: TDataSource
     DataSet = cdsViews
-    Left = 4912
-    Top = 328
+    Left = 2680
+    Top = 624
   end
   object cdsViews: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspViews'
-    Left = 4992
-    Top = 328
+    Left = 2760
+    Top = 624
     object cdsViewsNAME: TWideStringField
       FieldName = 'NAME'
       Required = True
@@ -10078,21 +10081,21 @@ object DMModifyDatabase: TDMModifyDatabase
       'INNER JOIN sys.objects o '
       '        ON m.object_id=o.object_id'
       'WHERE type_desc like '#39'%function%'#39)
-    Left = 4752
-    Top = 424
+    Left = 2520
+    Top = 720
   end
   object dspFunctions: TDataSetProvider
     DataSet = qFunctions
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4832
-    Top = 424
+    Left = 2600
+    Top = 720
   end
   object cdsFunctions: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspFunctions'
-    Left = 4992
-    Top = 424
+    Left = 2760
+    Top = 720
     object cdsFunctionsname: TWideStringField
       FieldName = 'name'
       Required = True
@@ -10111,8 +10114,8 @@ object DMModifyDatabase: TDMModifyDatabase
   end
   object dsFunctions: TDataSource
     DataSet = cdsFunctions
-    Left = 4912
-    Top = 424
+    Left = 2680
+    Top = 720
   end
   object qConstrain: TFDQuery
     Connection = FDConnection1
@@ -10132,25 +10135,25 @@ object DMModifyDatabase: TDMModifyDatabase
       ''
       'where t.Name = '#39'inventarioPiso'#39
       'ORDER BY t.Name')
-    Left = 4752
-    Top = 520
+    Left = 2520
+    Top = 816
   end
   object dspConstrain: TDataSetProvider
     DataSet = qConstrain
     Options = [poAllowCommandText, poUseQuoteChar]
-    Left = 4840
-    Top = 520
+    Left = 2608
+    Top = 816
   end
   object dsConstrain: TDataSource
-    Left = 4920
-    Top = 520
+    Left = 2688
+    Top = 816
   end
   object cdsConstrains: TClientDataSet
     Aggregates = <>
     Params = <>
     ProviderName = 'dspConstrain'
-    Left = 5008
-    Top = 520
+    Left = 2776
+    Top = 816
     object cdsConstrainsTableName: TWideStringField
       FieldName = 'TableName'
       Required = True
@@ -10186,8 +10189,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.INVENTORY_IMAGE ON dbo.INVENTARIOPI' +
         'SO.PRODUCTNO = dbo.INVENTORY_IMAGE.PRODUCT_ID')
-    Left = 4848
-    Top = 632
+    Left = 2848
+    Top = 624
   end
   object INVENTORY_IMAGE: TFDQuery
     AfterExecute = INVENTORY_IMAGEAfterExecute
@@ -10209,8 +10212,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]'
       'END;')
-    Left = 4976
-    Top = 624
+    Left = 2976
+    Top = 368
   end
   object INSERT_EDIT_SHOPPINGCART_DETAIL: TFDQuery
     AfterExecute = INSERT_EDIT_SHOPPINGCART_DETAILAfterExecute
@@ -10299,8 +10302,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'fItems OUTPUT;'
       #9'COMMIT TRANSACTION;'
       'END')
-    Left = 4976
-    Top = 752
+    Left = 2976
+    Top = 496
   end
   object INSERT_EDIT_SHOPPINGCART_HEADER: TFDQuery
     AfterExecute = INSERT_EDIT_SHOPPINGCART_HEADERAfterExecute
@@ -10338,8 +10341,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'  end;'
       #9'commit;'
       'END')
-    Left = 4976
-    Top = 832
+    Left = 2976
+    Top = 576
   end
   object CART_DETAIL: TFDQuery
     AfterExecute = CART_DETAILAfterExecute
@@ -10371,8 +10374,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 4976
-    Top = 904
+    Left = 2976
+    Top = 648
   end
   object CART_HEADER: TFDQuery
     Connection = FDConnection1
@@ -10422,8 +10425,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ALTER TABLE [dbo].[CART_HEADER] ADD  CONSTRAINT [DF_CART_HEADER_' +
         'ORDER_STATUS]  DEFAULT ((0)) FOR [ORDER_STATUS];'
       'END;')
-    Left = 4976
-    Top = 976
+    Left = 2976
+    Top = 720
   end
   object ADD_EDIT_CONTROLED_LOG: TFDQuery
     Connection = FDConnection1
@@ -10518,8 +10521,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'Commit;'
       'END')
-    Left = 4768
-    Top = 976
+    Left = 2768
+    Top = 968
   end
   object CALC_CART_TOTAL: TFDQuery
     Connection = FDConnection1
@@ -10548,8 +10551,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '= @NO_ITEMS, SUBTOTAL = @SUB_TOTAL WHERE ID = @CART_ID;'
       #9'commit'
       'END')
-    Left = 3976
-    Top = 800
+    Left = 2344
+    Top = 608
   end
   object INSERT_EDIT_PRODUCT_IMAGE: TFDQuery
     Connection = FDConnection1
@@ -10579,14 +10582,14 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end; '
       #9'commit;'
       'END')
-    Left = 4984
-    Top = 696
+    Left = 2984
+    Top = 440
   end
   object FDQuery5: TFDQuery
     Connection = FDConnection1
     OnError = FDQuery5Error
-    Left = 2544
-    Top = 712
+    Left = 1632
+    Top = 464
   end
   object CALC_TOTALS_CART_HEADER: TFDQuery
     Connection = FDConnection1
@@ -10750,8 +10753,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'end;'#9#9
       #9'commit'
       'END;')
-    Left = 4776
-    Top = 1064
+    Left = 2520
+    Top = 904
   end
   object IdSNTP1: TIdSNTP
     Host = 'se.pool.ntp.org'
@@ -10943,8 +10946,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ONE, '#39'n/a'#39', @TRANSACTIONNUMBER, @TOTAL, 0,'#39'M'#39'; '
       #9'commit;'
       'end;')
-    Left = 3776
-    Top = 952
+    Left = 1624
+    Top = 1112
   end
   object INDEX_LOG: TFDQuery
     Connection = FDConnection1
@@ -10957,8 +10960,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ')WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TE' +
         'MPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS =' +
         ' ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]')
-    Left = 4560
-    Top = 1296
+    Left = 3776
+    Top = 848
   end
   object INDEX_PASSWORDS: TFDQuery
     Connection = FDConnection1
@@ -10981,8 +10984,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ')WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TE' +
         'MPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS =' +
         ' ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY];')
-    Left = 4760
-    Top = 1504
+    Left = 3744
+    Top = 1136
   end
   object INDEX_IMAGES: TFDQuery
     SQL.Strings = (
@@ -10995,8 +10998,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ')WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TE' +
         'MPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS =' +
         ' ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]')
-    Left = 4184
-    Top = 1216
+    Left = 3768
+    Top = 744
   end
   object FDQuery6: TFDQuery
     Connection = FDConnection1
@@ -11038,8 +11041,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ';  '
       '         end;'
       '       END AS IsPrimaryKey; ')
-    Left = 5168
-    Top = 88
+    Left = 3168
+    Top = 80
   end
   object POS_UPDATE_TAX_TFAM: TFDQuery
     Connection = FDConnection1
@@ -11069,8 +11072,8 @@ object DMModifyDatabase: TDMModifyDatabase
         ';'
       '        COMMIT;'
       'END')
-    Left = 5160
-    Top = 184
+    Left = 3160
+    Top = 176
   end
   object FDQBackup: TFDQuery
     Connection = FDConnectionBackup
@@ -11102,8 +11105,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '= i.index_id'
       'WHERE'
       '    c.object_id = OBJECT_ID('#39'Passwords'#39')')
-    Left = 5192
-    Top = 304
+    Left = 3192
+    Top = 296
   end
   object ISAUTHORIZED: TFDQuery
     Connection = FDConnection1
@@ -11135,13 +11138,13 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'COMMIT'
       'END;')
-    Left = 5184
-    Top = 424
+    Left = 3184
+    Top = 416
   end
   object FDQuery7: TFDQuery
     Connection = FDConnection1
-    Left = 2648
-    Top = 696
+    Left = 1640
+    Top = 536
   end
   object PWRD_ISAUTHORIZED: TFDQuery
     Connection = FDConnection1
@@ -11410,8 +11413,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'COMMIT'
       'END;')
-    Left = 4768
-    Top = 1440
+    Left = 3752
+    Top = 1072
   end
   object CALC_TRIPLES_TAX: TFDQuery
     Connection = FDConnection1
@@ -11476,8 +11479,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #9'set @TOTAL_BALANCE_PLUS_TAX = isnull(@Estatal,0) + isnull(@MUNI' +
         'CIPAL,0) + ISNULL(@TRIPLES_BALANCE,0);'
       'END')
-    Left = 5184
-    Top = 512
+    Left = 3184
+    Top = 504
   end
   object CALC_PRODUCT_TAX: TFDQuery
     Connection = FDConnection1
@@ -11552,8 +11555,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'END;')
-    Left = 5184
-    Top = 592
+    Left = 3184
+    Top = 584
   end
   object POS_INSERT_TRIPLES_PAYMENT: TFDQuery
     Connection = FDConnection1
@@ -11611,8 +11614,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'#9
       #9'COMMIT;'
       'END;')
-    Left = 5192
-    Top = 696
+    Left = 3192
+    Top = 688
   end
   object WC_BAGPICKUP_UPDATE: TFDQuery
     Connection = FDConnection1
@@ -11650,8 +11653,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'DEALLOCATE MyCursor'
       #9'COMMIT;'
       'END;')
-    Left = 4768
-    Top = 1344
+    Left = 3752
+    Top = 976
   end
   object TRIPLE_S: TFDQuery
     Connection = FDConnection1
@@ -11673,8 +11676,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5200
-    Top = 800
+    Left = 3200
+    Top = 792
   end
   object BOTONES_MIDIFIERS: TFDQuery
     Connection = FDConnection1
@@ -11700,8 +11703,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5200
-    Top = 888
+    Left = 3200
+    Top = 880
   end
   object SIGNATURE_LINK: TFDQuery
     Connection = FDConnection1
@@ -11716,13 +11719,13 @@ object DMModifyDatabase: TDMModifyDatabase
       '  Select @SIGNATURE_LINK = (SCANED_RX_LINK) FROM NEXT_RXNUMBER;'
       '  commit'
       'end')
-    Left = 5320
-    Top = 96
+    Left = 3320
+    Top = 88
   end
   object FDQuery8: TFDQuery
     Connection = FDConnection1
-    Left = 5328
-    Top = 184
+    Left = 3328
+    Top = 176
   end
   object INSERT_ESIGNATURE_AI: TFDQuery
     Connection = FDConnection1
@@ -11771,8 +11774,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'commit;'
       #9'END;'
       'END;')
-    Left = 5328
-    Top = 296
+    Left = 3328
+    Top = 288
   end
   object INSERT_ESIGNATURE_PICTURE_AI: TFDQuery
     Connection = FDConnection1
@@ -11805,8 +11808,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'set @SIGNATURE_LINK = SCOPE_IDENTITY();'
       '  commit '
       'END;')
-    Left = 5400
-    Top = 424
+    Left = 3400
+    Top = 416
   end
   object INSERT_PICKUP: TFDQuery
     Connection = FDConnection1
@@ -11842,8 +11845,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'END;'
       #9'COMMIT'
       'END;')
-    Left = 5400
-    Top = 512
+    Left = 3400
+    Top = 504
   end
   object INSERT_ESIGNATURE_STAMP: TFDQuery
     Connection = FDConnection1
@@ -11901,8 +11904,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ion was stamped as signed by technician'#39',0,1;'
       #9#9'commit;'
       'END;')
-    Left = 5408
-    Top = 600
+    Left = 3408
+    Top = 592
   end
   object INI_VALUES: TFDQuery
     Connection = FDConnection1
@@ -11967,8 +11970,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'PTION_ESIGNATURE'#39'),'#39'SIGNATURE_LINK'#39','#39'IsIdentity'#39');'
       #9'COMMIT;'
       'END;')
-    Left = 5416
-    Top = 696
+    Left = 3416
+    Top = 688
   end
   object WC_INSERT_NEWPRODUCT_BAG: TFDQuery
     Connection = FDConnection1
@@ -12072,8 +12075,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '@RX_NUMBER) , '#39'Load'#39', @BAG_NUMBER, @RX_NUMBER);'
       #9'COMMIT'
       'END')
-    Left = 5416
-    Top = 800
+    Left = 3416
+    Top = 792
   end
   object CUSTOMER_CLASSIFICATION: TFDQuery
     Connection = FDConnection1
@@ -12094,8 +12097,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 4768
-    Top = 1128
+    Left = 2512
+    Top = 968
   end
   object INVENTORY_INOUT_REPORT: TFDQuery
     Connection = FDConnection1
@@ -12131,8 +12134,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 4768
-    Top = 1240
+    Left = 2512
+    Top = 1080
   end
   object INV_INOUT_RPT: TFDQuery
     Connection = FDConnection1
@@ -12157,8 +12160,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.INVENTARIOPISO ON dbo.ORDER_DETAIL.' +
         'PRODUCTID = dbo.INVENTARIOPISO.PRODUCTNO')
-    Left = 5200
-    Top = 976
+    Left = 3200
+    Top = 968
   end
   object inout_report: TFDQuery
     Connection = FDConnection1
@@ -12234,8 +12237,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'@inv_qty_todate);'
       #9'   commit;'
       'end;')
-    Left = 5192
-    Top = 1056
+    Left = 3192
+    Top = 1048
   end
   object ADD_EDIT_MOBILE_BUTTONS_DETAIL: TFDQuery
     Connection = FDConnection1
@@ -12301,8 +12304,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'end;'
       #9'commit;'
       'end;')
-    Left = 4976
-    Top = 1224
+    Left = 2976
+    Top = 968
   end
   object ADD_EDIT_BUTTONS_MOBILE_HEADER: TFDQuery
     Connection = FDConnection1
@@ -12330,8 +12333,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9' WHERE category_id = @category_id;'
       '  end;'
       'end;')
-    Left = 4976
-    Top = 1304
+    Left = 3960
+    Top = 936
   end
   object BUTTONS_MOBILE_DETAIL: TFDQuery
     Connection = FDConnection1
@@ -12365,8 +12368,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'ALTER TABLE [dbo].[BUTTONS_MOBILE_DETAIL] ADD  CONSTRAINT [DF_BU' +
         'TTONS_MOBILE_modifier]  DEFAULT ((0)) FOR [modifier];'
       'END;')
-    Left = 4976
-    Top = 1128
+    Left = 2976
+    Top = 872
   end
   object BUTTONS_MOBILE_HEADER: TFDQuery
     Connection = FDConnection1
@@ -12388,8 +12391,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 4976
-    Top = 1064
+    Left = 2976
+    Top = 808
   end
   object UPDATE_BALANCE: TFDQuery
     Connection = FDConnection1
@@ -12413,8 +12416,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'AYAMOUNT) WHERE TRANSACTIONNUMBER = @TRANS_NO; '
       #9'END;'
       'END;')
-    Left = 5600
-    Top = 120
+    Left = 3600
+    Top = 112
   end
   object UPDATE_GBY_ID: TFDQuery
     Connection = FDConnection1
@@ -12430,8 +12433,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'UPDATE TABS_HEADER SET GROUP_BY_ID = @ID WHERE ID = @ID;'
       #9'commit;'
       'END;')
-    Left = 5616
-    Top = 208
+    Left = 3616
+    Top = 200
   end
   object NOTIFICATION_LOG: TFDQuery
     Connection = FDConnection1
@@ -12456,8 +12459,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5616
-    Top = 296
+    Left = 3616
+    Top = 288
   end
   object INSERT_NOTIFICATION_LOG: TFDQuery
     Connection = FDConnection1
@@ -12481,8 +12484,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9',@result);'
       #9'commit'
       'END;')
-    Left = 5616
-    Top = 400
+    Left = 3616
+    Top = 392
   end
   object payment_type: TFDQuery
     Connection = FDConnection1
@@ -12521,13 +12524,13 @@ object DMModifyDatabase: TDMModifyDatabase
         'ALTER TABLE [dbo].[payment_type] ADD  CONSTRAINT [DF_payment_typ' +
         'e_isnegative]  DEFAULT ((0)) FOR [isnegative];'
       'end;')
-    Left = 5600
-    Top = 48
+    Left = 3600
+    Top = 40
   end
   object qCreateTables: TFDQuery
     Connection = FDConnection1
-    Left = 5752
-    Top = 48
+    Left = 3752
+    Top = 40
   end
   object CODES: TFDQuery
     Connection = FDConnection1
@@ -12550,8 +12553,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'E_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5608
-    Top = 496
+    Left = 3608
+    Top = 488
   end
   object WC_CREATE_NEWBAG: TFDQuery
     Connection = FDConnection1
@@ -12569,8 +12572,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9#9'(@BAG_NUMBER,0);'
       #9'Commit;'
       'END;')
-    Left = 5608
-    Top = 584
+    Left = 3608
+    Top = 576
   end
   object RX_AMOUNT_DUE: TFDQuery
     Connection = FDConnection1
@@ -12607,8 +12610,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #9'SET @TOTAL_AMOUNTDUE = isnull(@TADEUDADO_CASH + @TADEUDADO_PM,0' +
         ');'
       'END;')
-    Left = 5616
-    Top = 680
+    Left = 3616
+    Top = 672
   end
   object RX_AMOUNTDUE: TFDQuery
     Connection = FDConnection1
@@ -12624,8 +12627,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.OTC ON dbo.PRESCRIPTIONS.NUMERORECE' +
         'TA = dbo.OTC.NUMERORECETA')
-    Left = 5616
-    Top = 768
+    Left = 3616
+    Top = 760
   end
   object REFILL_REMINDER_SCHEDULE: TFDQuery
     Connection = FDConnection1
@@ -12652,8 +12655,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '_REFILL_REMINDER_SCHEDULE_SCHEDULE_DATE]  DEFAULT (getdate()) FO' +
         'R [SCHEDULE_DATE]'
       'END;')
-    Left = 5608
-    Top = 872
+    Left = 3608
+    Top = 864
   end
   object RX_REFILL_NOTIFIED: TFDQuery
     Connection = FDConnection1
@@ -12702,8 +12705,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'DEALLOCATE MyCursor  '
       #9'commit;'
       'END')
-    Left = 5576
-    Top = 1216
+    Left = 2968
+    Top = 1136
   end
   object WC_UPDATE_NOTIFICATION_MODE: TFDQuery
     Connection = FDConnection1
@@ -12777,8 +12780,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'WHERE BAG_NUMBER = @BAG_NUMBER;'
       #9'COMMIT;'
       'END;')
-    Left = 5184
-    Top = 1136
+    Left = 3184
+    Top = 1128
   end
   object PRINTERS: TFDQuery
     Connection = FDConnection1
@@ -12808,8 +12811,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5184
-    Top = 1232
+    Left = 2768
+    Top = 1056
   end
   object WC_PATIENTS: TFDQuery
     Connection = FDConnection1
@@ -12833,8 +12836,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.WILLCALL_STATUS ON dbo.PACIENTES.NU' +
         'MEROCLIENTE = dbo.WILLCALL_STATUS.CUSTOMER_NUMBER')
-    Left = 5184
-    Top = 1320
+    Left = 3904
+    Top = 1072
   end
   object OTC_NON_RX: TFDQuery
     Connection = FDConnection1
@@ -12849,8 +12852,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                         dbo.INVENTARIOPISO ON dbo.OTC.PRODUCT_I' +
         'D = dbo.INVENTARIOPISO.PRODUCTNO')
-    Left = 5192
-    Top = 1400
+    Left = 3912
+    Top = 1152
   end
   object POS_INSERT_EVERTEC_TRANS: TFDQuery
     Connection = FDConnection1
@@ -12870,8 +12873,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'SET @ID=SCOPE_IDENTITY();'
       #9'COMMIT;'#9
       'END;')
-    Left = 5760
-    Top = 192
+    Left = 3760
+    Top = 184
   end
   object EVERTEC: TFDQuery
     Connection = FDConnection1
@@ -12893,8 +12896,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]'
       'END;')
-    Left = 5760
-    Top = 272
+    Left = 3760
+    Top = 264
   end
   object PAYMENT_TYPES: TFDQuery
     Connection = FDConnection1
@@ -12916,8 +12919,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5768
-    Top = 368
+    Left = 3768
+    Top = 360
   end
   object CALC_DAILYTOTALS: TFDQuery
     Connection = FDConnection1
@@ -13226,8 +13229,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'Where ID = @ID;'
       #9'commit;'
       'END;')
-    Left = 5776
-    Top = 456
+    Left = 3776
+    Top = 448
   end
   object CALC_SPLIT_PAYMENT_TAX: TFDQuery
     Connection = FDConnection1
@@ -13250,8 +13253,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '  SET @PROCESS_FOOD_TAX = @PROCESS_FOOD_TAX  * @SPLIT_PERCENTAGE' +
         ';'
       'END;')
-    Left = 5776
-    Top = 560
+    Left = 3776
+    Top = 552
   end
   object INSERTPOS: TFDQuery
     Connection = FDConnection1
@@ -13526,8 +13529,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '    end;'
       'END'
       '')
-    Left = 5904
-    Top = 136
+    Left = 3904
+    Top = 128
   end
   object SOFTWARE_VERSION: TFDQuery
     Connection = FDConnection1
@@ -13549,8 +13552,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5912
-    Top = 216
+    Left = 3912
+    Top = 208
   end
   object POS_DISCOUNT: TFDQuery
     Connection = FDConnection1
@@ -13571,8 +13574,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '_NO and DISCOUNT = 0;'
       #9'commit transaction;'
       'END;')
-    Left = 5912
-    Top = 296
+    Left = 3912
+    Top = 288
   end
   object BOGOF: TFDQuery
     Connection = FDConnection1
@@ -13628,8 +13631,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'DEALLOCATE MyCursorComp'#9
       'end;'
       '')
-    Left = 5912
-    Top = 384
+    Left = 3912
+    Top = 376
   end
   object WC_PATIENTS_HISTORY: TFDQuery
     Connection = FDConnection1
@@ -13653,8 +13656,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                  dbo.WILLCALL_STATUS_HISTORY ON dbo.PACIENTES.N' +
         'UMEROCLIENTE = dbo.WILLCALL_STATUS_HISTORY.CUSTOMER_NUMBER')
-    Left = 5904
-    Top = 48
+    Left = 3904
+    Top = 40
   end
   object RELATIONFACILITY_PAT: TFDQuery
     Connection = FDConnection1
@@ -13677,8 +13680,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5768
-    Top = 632
+    Left = 3768
+    Top = 624
   end
   object RELATIONFACILITY_PRESC: TFDQuery
     Connection = FDConnection1
@@ -13701,8 +13704,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5568
-    Top = 960
+    Left = 3568
+    Top = 952
   end
   object Drug_Facilities: TFDQuery
     Connection = FDConnection1
@@ -13726,8 +13729,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'TOR = 80) ON [PRIMARY]'
       ') ON [PRIMARY]'
       'END;                                         ')
-    Left = 5576
-    Top = 1048
+    Left = 3576
+    Top = 1040
   end
   object Prescriptions_ByPhone: TFDQuery
     Connection = FDConnection1
@@ -13755,14 +13758,14 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY]'
       'END;')
-    Left = 5576
-    Top = 1136
+    Left = 3576
+    Top = 1128
   end
   object qryCreate: TFDQuery
     Connection = FDConnection1
     OnError = qryCreateError
-    Left = 5912
-    Top = 456
+    Left = 3912
+    Top = 448
   end
   object INVENTARIO_ITEM: TFDQuery
     Connection = FDConnection1
@@ -13819,8 +13822,8 @@ object DMModifyDatabase: TDMModifyDatabase
       ''
       ''
       '')
-    Left = 5920
-    Top = 536
+    Left = 3920
+    Top = 528
   end
   object INVENTORY_ERX: TFDQuery
     Connection = FDConnection1
@@ -13870,8 +13873,8 @@ object DMModifyDatabase: TDMModifyDatabase
         #9#9'IIF(@InvLTC=1,'#39'LTC'#39',IIF(@Inv340B=1,'#39'340B'#39','#39'REG'#39')),IIF(@InvLTC=' +
         '1,@sInvLTC,IIF(@Inv340B=1,@sInv340B,@sInvREG))      '
       'END')
-    Left = 5928
-    Top = 624
+    Left = 3928
+    Top = 616
   end
   object PRODUCT_SIGNATURE: TFDQuery
     Connection = FDConnection1
@@ -13899,8 +13902,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]    '
       'END;          ')
-    Left = 5368
-    Top = 1096
+    Left = 3368
+    Top = 1088
   end
   object INSERT_PRODUCT_SIGNATURE: TFDQuery
     Connection = FDConnection1
@@ -13942,8 +13945,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9#9'@PICKEDUP_ID_TYPE);'
       #9'commit;'
       'END;')
-    Left = 5376
-    Top = 1192
+    Left = 2976
+    Top = 1056
   end
   object PSEUDO_SALES_LOG: TFDQuery
     Connection = FDConnection1
@@ -13967,8 +13970,8 @@ object DMModifyDatabase: TDMModifyDatabase
       
         '                  dbo.TRANSACTIONDETAIL ON dbo.PRODUCT_SIGNATURE' +
         '.TRANSACTIONNUMBER = dbo.TRANSACTIONDETAIL.TRANSACTIONNUMBER')
-    Left = 5376
-    Top = 1280
+    Left = 3952
+    Top = 856
   end
   object WF_UPDATE_PICKUP: TFDQuery
     Connection = FDConnection1
@@ -14038,8 +14041,8 @@ object DMModifyDatabase: TDMModifyDatabase
         '@PRODUCTNO, @DATE_, @TIME_; '
       'END'
       '')
-    Left = 5368
-    Top = 1376
+    Left = 3944
+    Top = 768
   end
   object POS_UPDATE_DEPART_ATTRIB: TFDQuery
     Connection = FDConnection1
@@ -14211,8 +14214,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'EXEC (@SQL);'
       #9'END'
       'END')
-    Left = 5368
-    Top = 904
+    Left = 3368
+    Top = 896
   end
   object POS_GET_HANDHELDINFO: TFDQuery
     Connection = FDConnection1
@@ -14362,8 +14365,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'UPDATE HANDHELD SET QTY=@pQty WHERE ID=@pID'
       #9'END;'
       'END;')
-    Left = 5368
-    Top = 984
+    Left = 3368
+    Top = 976
   end
   object PAYMENT_CARD_LOG: TFDQuery
     Connection = FDConnection1
@@ -14387,8 +14390,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'MARY]'
       ') ON [PRIMARY];'
       'END')
-    Left = 208
-    Top = 1064
+    Left = 32
+    Top = 896
   end
   object Counters: TFDQuery
     Connection = FDConnection1
@@ -14406,8 +14409,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'[ReceiptMessage] [varchar](1600) NULL'
       ') ON [PRIMARY];'
       'END')
-    Left = 336
-    Top = 1064
+    Left = 160
+    Top = 896
   end
   object CALC_PERCENTAGE_DISCOUNT: TFDQuery
     Connection = FDConnection1
@@ -14444,8 +14447,8 @@ object DMModifyDatabase: TDMModifyDatabase
       ''
       '    COMMIT TRANSACTION;'
       'END;')
-    Left = 3912
-    Top = 736
+    Left = 2336
+    Top = 528
   end
   object POS_GET_Stickers: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -14527,8 +14530,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9')'
       '  END'
       '')
-    Left = 816
-    Top = 984
+    Left = 288
+    Top = 904
   end
   object POS_EDIT_INVENTORY: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -14802,8 +14805,8 @@ object DMModifyDatabase: TDMModifyDatabase
       '  end;'
       '  commit;'
       'END;')
-    Left = 944
-    Top = 984
+    Left = 416
+    Top = 904
   end
   object usp_POSStickersSave: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -14915,8 +14918,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'END'
       'END'
       '')
-    Left = 816
-    Top = 1072
+    Left = 288
+    Top = 992
   end
   object POS_GET_PROCESS832INFO: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -15110,8 +15113,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'SELECT @pNUM AS SNUM;'
       #9'END;'
       'END;')
-    Left = 952
-    Top = 1072
+    Left = 424
+    Top = 992
   end
   object usp_POSStickersFilter: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -15302,8 +15305,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9
       'END;'
       '')
-    Left = 1104
-    Top = 984
+    Left = 576
+    Top = 904
   end
   object usp_POSStickersPrintReport: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -15969,8 +15972,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'END'
       'END'
       '')
-    Left = 1112
-    Top = 1072
+    Left = 584
+    Top = 992
   end
   object ufn_GetUPCA: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -16012,8 +16015,8 @@ object DMModifyDatabase: TDMModifyDatabase
       ''
       '        RETURN @Response'
       'END')
-    Left = 1240
-    Top = 984
+    Left = 712
+    Top = 904
   end
   object ufn_ChecksumDigit: TFDQuery
     AfterExecute = DELETE_PRINT_QUERIESAfterExecute
@@ -16089,8 +16092,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'DIFIED'
       '        RETURN @UPC_MODIFIED '
       'END')
-    Left = 1248
-    Top = 1072
+    Left = 720
+    Top = 992
   end
   object USP_POS_INSERT_SPINPOS_TRANS: TFDQuery
     AfterExecute = USP_POS_INSERT_SPINPOS_TRANSAfterExecute
@@ -16121,8 +16124,8 @@ object DMModifyDatabase: TDMModifyDatabase
       #9'COMMIT;'#9
       'END;'
       '')
-    Left = 560
-    Top = 1048
+    Left = 56
+    Top = 816
   end
   object CALC_PAYOUT: TFDQuery
     AfterExecute = USP_POS_INSERT_SPINPOS_TRANSAfterExecute
@@ -16205,8 +16208,8 @@ object DMModifyDatabase: TDMModifyDatabase
       ') AS i'
       '  ON th.transactionnumber = i.transactionnumber;'
       'END')
-    Left = 208
-    Top = 1144
+    Left = 32
+    Top = 976
   end
   object QBorrarNonMatchedNDC: TFDQuery
     Connection = FDConnection1
