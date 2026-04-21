@@ -3880,6 +3880,8 @@ begin
   CreateFields('InventarioPiso', 'SUPPLIER_PRICE2', 'decimal(18,2) NULL');
   CreateFields('InventarioPiso', 'SUPP_ITEMID', 'char(20) NULL');
   CreateFields('InventarioPiso', 'SUPP_ITEMID2', 'char(20) NULL') ;
+  CreateFields('InventarioPiso', 'QTY_STOCK', 'int default(0) NULL');    //Fields added for transferring inventory AGC041626
+  CreateFields('InventarioPiso', 'QTY_FLOOR', 'int default(0) NULL');    //
   ///Suplidores
   CreateFields('SUPLIDORES', 'STATE', 'char(2) null');
   CreateFields('SUPLIDORES', 'EMAIL', 'nchar(80) null');
