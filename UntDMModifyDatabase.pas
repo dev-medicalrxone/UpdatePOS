@@ -685,6 +685,8 @@ type
     CALC_PAYOUT: TFDQuery;
     tr_SPINPOS_AfterInsert_UpdateTransactionHeader: TFDQuery;
     QBorrarNonMatchedNDC: TFDQuery;
+    EM_INSERT_PRODS: TFDQuery;
+    FDConnection3: TFDConnection;
     procedure DataModuleCreate(Sender: TObject);
     procedure cdsPriceTableAfterPost(DataSet: TDataSet);
     Procedure ExecSql(Token: String);
@@ -2096,6 +2098,14 @@ begin
     Values['password'] := 'agabriel';
     FDConnection1.Connected := TRUE;
   end;
+  With FDConnection3.Params do
+  begin
+    Values['Server'] := ServerName;
+    Values['Database'] := 'InventoryIQ';
+    Values['User_Name'] := 'dbo';
+    Values['password'] := 'agabriel';
+    FDConnection3.Connected := TRUE;
+  end;
   FrmMain.StatusBar1.Panels[0].Text := Trim(DataBaseName) + ' ' + Trim(ServerName);
   Try
     With FDConnectionBackup.Params do
@@ -2168,6 +2178,17 @@ begin
   FrmMain.Memo2.Lines.Add('Dropping all!');
   ExecQry('DROP TABLE RX_LABEL');
   //===================Procedures====================================
+  qProcedures.Connection := FDConnection1;       //Assign connection since connection for DB InventoryIQ has been added AGC042826
+  cdsProcedures.Close;
+  cdsProcedures.CommandText := 'SELECT * FROM sys.procedures where is_ms_shipped = 0';
+  cdsProcedures.Open;
+  cdsProcedures.First;
+  while not cdsProcedures.Eof do
+  begin
+    ExecQry('DROP PROCEDURE ' + Trim(cdsProceduresname.Value));
+    cdsProcedures.Next;
+  end;
+  qProcedures.Connection := FDConnection3;       //Assign connection since connection for DB InventoryIQ has been added AGC042826
   cdsProcedures.Close;
   cdsProcedures.CommandText := 'SELECT * FROM sys.procedures where is_ms_shipped = 0';
   cdsProcedures.Open;
@@ -2178,6 +2199,17 @@ begin
     cdsProcedures.Next;
   end;
   //===================Triggers====================================
+  qTriggers.Connection := FDConnection1;    //Assign connection since connection for DB InventoryIQ has been added AGC042826
+  cdsTriggers.Close;
+  cdsTriggers.CommandText := 'SELECT name, is_instead_of_trigger FROM sys.triggers WHERE type = ' + chr(39) + 'TR' + chr(39);
+  cdsTriggers.Open;
+  cdsTriggers.First;
+  while not cdsTriggers.Eof do
+  begin
+    ExecQry('DROP Trigger ' + Trim(cdsTriggersname.Value));
+    cdsTriggers.Next;
+  end;
+  qTriggers.Connection := FDConnection3;    //Assign connection since connection for DB InventoryIQ has been added AGC042826
   cdsTriggers.Close;
   cdsTriggers.CommandText := 'SELECT name, is_instead_of_trigger FROM sys.triggers WHERE type = ' + chr(39) + 'TR' + chr(39);
   cdsTriggers.Open;
@@ -4326,6 +4358,8 @@ begin
   ExecQryCreate(USP_POS_INSERT_SPINPOS_TRANS.sql.Text);
   ExecQryCreate(INSERT_PRODUCT_SIGNATURE.SQL.Text);
   ExecQryCreate(CALC_PAYOUT.SQL.Text);
+  ExecQryCreate(EM_INSERT_PRODS.SQL.Text);  //Procedure for DB InventoryIQ AGC042826
+  ExecQryCreate(BACKUPDATABASE.SQL.Text);  //This procedure was missing AGC050826
   //=========== triggers ======================================================
   ExecQryCreate(CALC_CART_TOTAL.SQL.Text);
   ExecQryCreate(UPDATE_BALANCE.SQL.Text);

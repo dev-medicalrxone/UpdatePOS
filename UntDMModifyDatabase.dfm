@@ -997,7 +997,7 @@ object DMModifyDatabase: TDMModifyDatabase
       #9#9'SET @Current_Identity = SCOPE_IDENTITY()'
       #9'end;'
       #9'commit;'
-      'END; ')
+      'END;')
     Left = 1008
     Top = 472
   end
@@ -1579,42 +1579,165 @@ object DMModifyDatabase: TDMModifyDatabase
   object TRANSACTIONDETAIL_DELETE: TFDQuery
     Connection = FDConnection1
     SQL.Strings = (
-      
-        'CREATE  PROCEDURE [dbo].[TRANSACTIONDETAIL_DELETE] @REGISTER INT' +
-        ', @TNUMBER INT'
+      'CREATE  PROCEDURE [dbo].[TRANSACTIONDETAIL_DELETE] '
+      '    @REGISTER    INT,'
+      '    @TNUMBER     INT,'
+      '    @DBName      SYSNAME,'
+      '    @USUARIO     CHAR(3),'
+      '    @SUPERVISOR  VARCHAR(3)'
       'AS'
-      'DECLARE @ID INT'
-      'DECLARE @QTY FLOAT'
-      'DECLARE @PRODUCTID INT'
-      '  SET NOCOUNT ON'
       'BEGIN'
-      '  begin transaction'
-      '  INSERT INTO TRANSACTIONHEADER'
-      '   SELECT *'
+      '    SET NOCOUNT ON;'
+      ''
+      '    DECLARE @SQL NVARCHAR(MAX);'
+      ''
+      '    BEGIN TRY'
+      '        BEGIN TRANSACTION;'
+      ''
+      '        SET @SQL = N'#39
+      '        ----------------------------------------------------'
+      '        -- 1) If COPAY record exists, zero matching non-C record'
+      '        ----------------------------------------------------'
+      '        UPDATE td_other'
+      '        SET td_other.TOTAL = 0'
+      '        FROM dbo.TRANSACTIONDETAIL_TEMP td_c'
+      '        INNER JOIN '#39' + QUOTENAME(@DBName) + N'#39'.dbo.OTC otc_c'
+      '            ON otc_c.OTCNUMBER = td_c.OTC_NUMBER'
+      '        INNER JOIN dbo.TRANSACTIONDETAIL_TEMP td_other'
       
-        '   FROM TRANSACTIONHEADER_TEMP WHERE TRANSACTIONNUMBER = @TNUMBE' +
-        'R;'
+        '            ON td_other.TRANSACTIONNUMBER = td_c.TRANSACTIONNUMB' +
+        'ER'
       
-        '  DELETE FROM TRANSACTIONHEADER_TEMP WHERE TRANSACTIONNUMBER = @' +
-        'TNUMBER;'
-      '  INSERT INTO TRANSACTIONDETAIL'
+        '           AND td_other.UPC LIKE '#39#39'%'#39#39' + CAST(otc_c.NUMERORECETA' +
+        ' AS VARCHAR(50)) + '#39#39'%'#39#39
+      '        INNER JOIN '#39' + QUOTENAME(@DBName) + N'#39'.dbo.OTC otc_other'
+      '            ON otc_other.OTCNUMBER = td_other.OTC_NUMBER'
+      '        WHERE td_c.TRANSACTIONNUMBER = @TNUMBER'
+      '          AND ISNULL(td_c.OTC_NUMBER, 0) > 0'
+      '          AND otc_c.RX_STATUS = '#39#39'C'#39#39
+      '          AND otc_other.RX_STATUS <> '#39#39'C'#39#39
+      '          AND otc_other.OTCNUMBER <> otc_c.OTCNUMBER;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 2) Mark OTC as charged only when OTC_NUMBER > 0'
+      '        --    Also fill WF_CASHIER'
+      '        ----------------------------------------------------'
+      '        UPDATE otc'
+      '        SET '
+      '            otc.COBRADO = '#39#39'T'#39#39','
+      '            otc.WF_CASHIER ='
+      '                RTRIM(@USUARIO) + '#39#39' '#39#39' +'
       
-        '    SELECT * FROM TRANSACTIONDETAIL_TEMP WHERE TRANSACTIONNUMBER' +
-        ' = @TNUMBER;'
+        '                REPLACE(RIGHT(CONVERT(VARCHAR(20), GETDATE(), 10' +
+        '0), 7), '#39#39' '#39#39', '#39#39#39#39') + '#39#39' '#39#39' +'
+      '                CONVERT(VARCHAR(10), GETDATE(), 101)'
+      '        FROM '#39' + QUOTENAME(@DBName) + N'#39'.dbo.OTC otc'
+      '        INNER JOIN dbo.TRANSACTIONDETAIL_TEMP td'
+      '            ON td.OTC_NUMBER = otc.OTCNUMBER'
+      '        WHERE td.TRANSACTIONNUMBER = @TNUMBER'
+      '          AND ISNULL(td.OTC_NUMBER, 0) > 0;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 3) Insert log only when OTC_NUMBER > 0'
+      '        ----------------------------------------------------'
+      '        INSERT INTO '#39' + QUOTENAME(@DBName) + N'#39'.dbo.[LOG]'
+      '        ('
+      '            CODIGO,'
+      '            NDC_BARCODE,'
+      '            FECHA,'
+      '            USUARIO,'
+      '            DESCRIPCION,'
+      '            SUPERVISOR,'
+      '            NO_RX,'
+      '            OTCNUMBER,'
+      '            PRESCRIBER_ID,'
+      '            CUSTOMER_ID,'
+      '            PASSWORD_ID,'
+      '            HEALTH_PLAN_ID,'
+      '            PATIENT_HEALTH_PLAN_ID,'
+      '            DRUG_ID,'
+      '            POS_RX,'
+      '            NOTE,'
+      '            CONTROLLED,'
+      '            SUCCESSFUL'
+      '        )'
+      '        SELECT DISTINCT'
+      '            '#39#39'M'#39#39','
+      '            '#39#39#39#39','
+      '            GETDATE(),'
+      '            @USUARIO,'
+      '            '#39#39'TRANSACTION DELETE'#39#39','
+      '            @SUPERVISOR,'
+      '            otc.NUMERORECETA,'
+      '            otc.OTCNUMBER,'
+      '            0,'
+      '            otc.NUMEROCLIENTE,'
+      '            0,'
+      '            ISNULL(otc.PLANESMEDICOSNO, 0),'
+      '            ISNULL(otc.NUMEROPLAN, 0),'
+      '            ISNULL(otc.PRODUCT_ID, 0),'
+      '            ISNULL(otc.RX_STATUS, '#39#39'R'#39#39'),'
       
-        '  DELETE FROM TRANSACTIONDETAIL_TEMP WHERE OPENED = '#39'T'#39' AND TRAN' +
-        'SACTIONNUMBER = @TNUMBER;   '
+        '            '#39#39'Transaction detail deleted / charged from POS tran' +
+        'saction '#39#39','
+      '            0,'
+      '            1'
+      '        FROM dbo.TRANSACTIONDETAIL_TEMP td'
+      '        INNER JOIN '#39' + QUOTENAME(@DBName) + N'#39'.dbo.OTC otc'
+      '            ON otc.OTCNUMBER = td.OTC_NUMBER'
+      '        WHERE td.TRANSACTIONNUMBER = @TNUMBER'
+      '          AND ISNULL(td.OTC_NUMBER, 0) > 0;'
+      '        '#39';'
+      ''
+      '        EXEC sys.sp_executesql'
+      '            @SQL,'
       
-        '  --DELETE FROM TRANSACTIONHEADER_TEMP WHERE OPENED <> '#39'S'#39' AND O' +
-        'PENED <> '#39'H'#39' AND TRANSACTIONNUMBER = @TNUMBER;'
-      
-        '  --DELETE FROM TRANSACTIONHEADER_TEMP WHERE OPENED <> '#39'S'#39' AND O' +
-        'PENED <> '#39'H'#39' and TRANSACTIONDATE < dateadd(day, -4, getdate());'
-      
-        '  --DELETE FROM TRANSACTIONDETAIL_TEMP WHERE OPENED <> '#39'S'#39' AND O' +
-        'PENED <> '#39'H'#39' and FECHAVENTA < dateadd(day, -4, getdate());'
-      '  Exec CANCEL_TABS @TNUMBER;'
-      '  commit'
+        '            N'#39'@TNUMBER INT, @USUARIO CHAR(3), @SUPERVISOR VARCHA' +
+        'R(3)'#39','
+      '            @TNUMBER = @TNUMBER,'
+      '            @USUARIO = @USUARIO,'
+      '            @SUPERVISOR = @SUPERVISOR;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 4) Move header'
+      '        ----------------------------------------------------'
+      '        INSERT INTO dbo.TRANSACTIONHEADER'
+      '        SELECT *'
+      '        FROM dbo.TRANSACTIONHEADER_TEMP'
+      '        WHERE TRANSACTIONNUMBER = @TNUMBER;'
+      ''
+      '        DELETE FROM dbo.TRANSACTIONHEADER_TEMP'
+      '        WHERE TRANSACTIONNUMBER = @TNUMBER;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 5) Move detail'
+      '        ----------------------------------------------------'
+      '        INSERT INTO dbo.TRANSACTIONDETAIL'
+      '        SELECT *'
+      '        FROM dbo.TRANSACTIONDETAIL_TEMP'
+      '        WHERE TRANSACTIONNUMBER = @TNUMBER;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 6) Delete temp details anyway'
+      '        --    Even when OTC_NUMBER is NULL or 0'
+      '        ----------------------------------------------------'
+      '        DELETE FROM dbo.TRANSACTIONDETAIL_TEMP'
+      '        WHERE OPENED = '#39'T'#39
+      '          AND TRANSACTIONNUMBER = @TNUMBER;'
+      ''
+      '        ----------------------------------------------------'
+      '        -- 7) Cancel tabs'
+      '        ----------------------------------------------------'
+      '        EXEC dbo.CANCEL_TABS @TNUMBER;'
+      ''
+      '        COMMIT TRANSACTION;'
+      '    END TRY'
+      '    BEGIN CATCH'
+      '        IF @@TRANCOUNT > 0'
+      '            ROLLBACK TRANSACTION;'
+      ''
+      '        THROW;'
+      '    END CATCH;'
       'END;')
     Left = 888
     Top = 912
@@ -2137,7 +2260,7 @@ object DMModifyDatabase: TDMModifyDatabase
     Top = 696
   end
   object ORDER_TOTAL: TFDQuery
-    Connection = FDConnection1
+    Connection = FDConnection3
     SQL.Strings = (
       'CREATE TRIGGER [dbo].[ORDER_TOTAL] '
       '   ON  [dbo].[ORDER_DETAIL]'
@@ -2570,8 +2693,8 @@ object DMModifyDatabase: TDMModifyDatabase
     LoginPrompt = False
     Transaction = FDTransaction1
     AfterConnect = FDConnection1AfterConnect
-    Left = 98
-    Top = 24
+    Left = 34
+    Top = 8
   end
   object FDGUIxWaitCursor1: TFDGUIxWaitCursor
     Provider = 'Forms'
@@ -7844,8 +7967,7 @@ object DMModifyDatabase: TDMModifyDatabase
         'INE_LOC VARCHAR(10), @SHELF_LOC VARCHAR(10),'
       
         '   @STOCK_LOC VARCHAR(10), @SIZE_IT VARCHAR(20), @AskID INT,@NUM' +
-        'EROSUPLIDOR2 int, @SUPPLIER_PRICE_DEFINE int, @SUPPLIER_PRICE de' +
-        'cimal(18,2), @SUPPLIER_PRICE2 decimal(18,2),'
+        'EROSUPLIDOR2 int, @SUPPLIER_PRICE_DEFINE int,'
       
         '   @SUPP_ITEMID char(20), @SUPP_ITEMID2 char(20), @GROUP_PRODUCT' +
         'NO INT, @MAIN_NDC bit, @LST_MODIF_PR DATETIME'
@@ -7901,8 +8023,7 @@ object DMModifyDatabase: TDMModifyDatabase
         'oc = @STOCK_LOC, SIZE_IT = @SIZE_IT,'
       
         #9#9#9'AskID = @AskID, NUMEROSUPLIDOR2 = @NUMEROSUPLIDOR2, SUPPLIER_' +
-        'PRICE_DEFINE = @SUPPLIER_PRICE_DEFINE, SUPPLIER_PRICE = @SUPPLIE' +
-        'R_PRICE, SUPPLIER_PRICE2 = @SUPPLIER_PRICE2,'
+        'PRICE_DEFINE = @SUPPLIER_PRICE_DEFINE,'
       
         #9#9#9'SUPP_ITEMID = @SUPP_ITEMID, SUPP_ITEMID2 = @SUPP_ITEMID2, GRO' +
         'UP_PRODUCTNO = @GROUP_PRODUCTNO, MAIN_NDC = @MAIN_NDC,  LST_MODI' +
@@ -7931,7 +8052,7 @@ object DMModifyDatabase: TDMModifyDatabase
       
         #9#9'PepSpray, MAxPerTx, SkipPriceUpd, DtSkipPriceUpd, SkipPriceUpd' +
         'Init, line_loc, shelf_loc, stock_loc, SIZE_IT, AskID, NUMEROSUPL' +
-        'IDOR2, SUPPLIER_PRICE_DEFINE, SUPPLIER_PRICE, SUPPLIER_PRICE2,'
+        'IDOR2, SUPPLIER_PRICE_DEFINE,'
       
         #9#9'SUPP_ITEMID, SUPP_ITEMID2, GROUP_PRODUCTNO, MAIN_NDC, LST_MODI' +
         'F_PR)'
@@ -7958,8 +8079,8 @@ object DMModifyDatabase: TDMModifyDatabase
         'KIPPRICEUPDINIT, @LINE_LOC, @SHELF_LOC, @STOCK_LOC,'
       
         #9#9'@SIZE_IT, @AskID, @NUMEROSUPLIDOR2, @SUPPLIER_PRICE_DEFINE, @S' +
-        'UPPLIER_PRICE, @SUPPLIER_PRICE2,@SUPP_ITEMID, @SUPP_ITEMID2, @GR' +
-        'OUP_PRODUCTNO, @MAIN_NDC, @LST_MODIF_PR)'
+        'UPP_ITEMID, @SUPP_ITEMID2, @GROUP_PRODUCTNO, @MAIN_NDC, @LST_MOD' +
+        'IF_PR)'
       #9#9'set @PID = SCOPE_IDENTITY();'
       #9'end'
       
@@ -16215,5 +16336,180 @@ object DMModifyDatabase: TDMModifyDatabase
     Connection = FDConnection1
     Left = 352
     Top = 96
+  end
+  object EM_INSERT_PRODS: TFDQuery
+    SQL.Strings = (
+      'CREATE PROCEDURE [dbo].[EM_INSERT_PRODS]('
+      '@UPC char(14),'
+      '@COSTRECEIVED decimal(18,2),'
+      '@REASON varchar(100),'
+      '@PRICE decimal(18,2),'
+      '@TAMANO float,'
+      '@PACKAGESIZE smallint,'
+      '@QTYRECEIVED decimal(18,2),'
+      '@LOTE char(12),'
+      '@FECHA_EXPIRACION datetime,'
+      '@DESCRIPTION char(75),'
+      '@PRODUCTID int,'
+      '@COSTORDERED decimal(18,2),'
+      '@RECETARIO char(1),'
+      '@ESPECIAL decimal(18,2),'
+      '@COMESPECIAL datetime,'
+      '@TERMESPECIAL datetime,'
+      '@AWP decimal(18,2),'
+      '@PAQUETES_FRASCOS int,'
+      '@TOTAL_VALUE decimal(18,2),'
+      '@QTYORDERED decimal(18,2),'
+      '@GROUP_PRODUCTNO int,'
+      '@ORDERID int,'
+      '@PRECIOVENTA2 decimal(18,2),'
+      '@NDC nchar(19),'
+      '@PRECIO_WIC decimal(18,2),'
+      '@INV_QTY_TODATE decimal(18,2),'
+      '@total_output decimal(18,2) output,'
+      '@option integer,'
+      '@DETAILID integer'
+      ')'
+      'AS'
+      'DECLARE @recordCount int = 0;'
+      'DECLARE @rowCount int = 1;'
+      '--DECLARE @detailID int;'
+      'BEGIN'
+      #9'SET NOCOUNT ON;'
+      #9'BEGIN TRANSACTION '
+      
+        '    /*    SELECT @recordCount = count(*) from ORDER_DETAIL od IN' +
+        'NER JOIN ORDER_HEADER oh ON od.ORDERID = oh.ORDERID where od.PRO' +
+        'DUCTID = @PRODUCTID and oh.STATUS <> '#39'C'#39';   --Check if the produ' +
+        'ct exists'
+      '        if @recordCount > 0 '
+      '        begin'
+      '            SELECT  @detailid = od.DETAILID FROM ORDER_DETAIL od'
+      #9#9#9'INNER JOIN ORDER_HEADER oh ON od.ORDERID = oh.ORDERID'
+      
+        #9#9#9'WHERE od.productID = @PRODUCTID and oh.STATUS <> '#39'C'#39' order by' +
+        ' od.ORDERID'
+      '            OFFSET @rowCount - 1 ROWS FETCH NEXT 1 ROW ONLY;'
+      '            while @rowCount <= @recordCount'
+      '            begin'
+      '                INSERT INTO [dbo].[ORDER_DETAIL_TEMP]'
+      
+        '                   ([UPC], [COSTRECEIVED], [REASON], [PRICE], [T' +
+        'AMANO], [PACKAGESIZE], [QTYRECEIVED], [LOTE], [FECHA_EXPIRACION]'
+      
+        '                   , [DESCRIPTION], [PRODUCTID], [COSTORDERED], ' +
+        '[RECETARIO], [ESPECIAL]'
+      
+        '                   , [COMESPECIAL], [TERMESPECIAL], [AWP], [PAQU' +
+        'ETES_FRASCOS], [TOTAL_VALUE]'
+      
+        '                   , [QTYORDERED], [GROUP_PRODUCTNO], [ORDERID],' +
+        ' [PRECIOVENTA2], [NDC]'
+      
+        '                   , [PRECIO_WIC], [INV_QTY_TODATE]) select isnu' +
+        'll(UPC, '#39'0'#39'), isnull(COSTRECEIVED,0), isnull(REASON, '#39#39'), isnull' +
+        '(PRICE, 0), isnull(TAMANO, 0)'
+      
+        '                   , isnull(PACKAGESIZE, 0), isnull(QTYRECEIVED,' +
+        ' 0), isnull(LOTE, 0), isnull(FECHA_EXPIRACION, GETDATE()), isnul' +
+        'l(DESCRIPTION, '#39#39'), isnull(PRODUCTID, 0)'
+      
+        '                   , isnull(COSTORDERED, 0), isnull(RECETARIO, '#39 +
+        #39'), isnull(ESPECIAL, 0), isnull(COMESPECIAL, GETDATE()), isnull(' +
+        'TERMESPECIAL, GETDATE())'
+      
+        '                   , isnull(AWP, 0), isnull(PAQUETES_FRASCOS, 0)' +
+        ', isnull(TOTAL_VALUE, 0), isnull(QTYORDERED, 0), isnull(GROUP_PR' +
+        'ODUCTNO, @PRODUCTID), isnull(ORDERID, 0)'
+      
+        '                   , isnull(PRECIOVENTA2, 0), isnull(NDC, '#39'0'#39'), ' +
+        'isnull(PRECIO_WIC, 0), isnull(INV_QTY_TODATE, 0) from ORDER_DETA' +
+        'IL where detailid  = @detailID ;'
+      '                set @rowCount = @rowCount + 1;'
+      '            end'
+      '        end'
+      '        else   */'
+      '        if @option = 1'
+      '        begin'
+      '          UPDATE [dbo].[ORDER_DETAIL]'
+      '            SET'
+      '              [UPC] = ISNULL(@UPC, '#39'0'#39'),'
+      '              [COSTRECEIVED] = ISNULL(@COSTRECEIVED, 0),'
+      '              [PRICE] = ISNULL(@PRICE, 0),'
+      '              [QTYRECEIVED] = ISNULL(@QTYRECEIVED, 0),'
+      '              [LOTE] = ISNULL(@LOTE, '#39'null'#39'),'
+      
+        '              [FECHA_EXPIRACION] = ISNULL(@FECHA_EXPIRACION, GET' +
+        'DATE()),'
+      '              [DESCRIPTION] = ISNULL(@DESCRIPTION, '#39'null'#39'), '
+      '              [COSTORDERED] = ISNULL(@COSTORDERED, 0),'
+      '              [RECETARIO] = ISNULL(@RECETARIO, '#39#39'),'
+      '              [ESPECIAL] = ISNULL(@ESPECIAL, 0),'
+      '              [COMESPECIAL] = ISNULL(@COMESPECIAL, GETDATE()),'
+      '              [TERMESPECIAL] = ISNULL(@TERMESPECIAL, GETDATE()),'
+      '              [AWP] = ISNULL(@AWP, 0),'
+      '              [PAQUETES_FRASCOS] = ISNULL(@PAQUETES_FRASCOS, 0),'
+      '              [TOTAL_VALUE] = ISNULL(@TOTAL_VALUE, 0),'
+      '              [QTYORDERED] = ISNULL(@QTYORDERED, 0),'
+      '              [NDC] = ISNULL(@NDC, '#39'0'#39'),'
+      '              [PRECIO_WIC] = ISNULL(@PRECIO_WIC, 0)'
+      '              WHERE [DETAILID] = ISNULL(@detailID, 0);'
+      ''
+      '            SELECT @total_output = ISNULL(@TOTAL_VALUE, 0);  '
+      '        end'
+      '        else'
+      '        begin'
+      #9#9'    INSERT INTO [dbo].[ORDER_DETAIL]'
+      
+        '               ([UPC], [COSTRECEIVED], [REASON], [PRICE], [TAMAN' +
+        'O], [PACKAGESIZE], [QTYRECEIVED], [LOTE], [FECHA_EXPIRACION]'
+      
+        '               , [DESCRIPTION], [PRODUCTID], [COSTORDERED], [REC' +
+        'ETARIO], [ESPECIAL]'
+      
+        '               , [COMESPECIAL], [TERMESPECIAL], [AWP], [PAQUETES' +
+        '_FRASCOS], [TOTAL_VALUE]'
+      
+        '               , [QTYORDERED], [GROUP_PRODUCTNO], [ORDERID], [PR' +
+        'ECIOVENTA2], [NDC]'
+      '               , [PRECIO_WIC], [INV_QTY_TODATE])'
+      '            VALUES'
+      
+        '               (isnull(@UPC, '#39'0'#39'), isnull(@COSTRECEIVED, 0), isn' +
+        'ull(@REASON, '#39'null'#39'), isnull(@PRICE, 0), isnull(@TAMANO, 0), isn' +
+        'ull(@PACKAGESIZE, 0), isnull(@QTYRECEIVED, 0)'
+      
+        '               , isnull(@LOTE, '#39'null'#39'), isnull(@FECHA_EXPIRACION' +
+        ', GETDATE()), isnull(@DESCRIPTION, '#39'null'#39'), isnull(@PRODUCTID, 0' +
+        '), isnull(@COSTORDERED, 0), isnull(@RECETARIO, '#39#39')'
+      
+        '               , isnull(@ESPECIAL, 0), isnull(@COMESPECIAL, GETD' +
+        'ATE()), isnull(@TERMESPECIAL, GETDATE()), isnull(@AWP, 0), isnul' +
+        'l(@PAQUETES_FRASCOS, 0), isnull(@TOTAL_VALUE, 0)'
+      
+        '               , isnull(@QTYORDERED, 0), isnull(@GROUP_PRODUCTNO' +
+        ', @PRODUCTID), isnull(@ORDERID, 0), isnull(@PRECIOVENTA2, 0), is' +
+        'null(@NDC, '#39'0'#39'), isnull(@PRECIO_WIC, 0), isnull(@INV_QTY_TODATE,' +
+        ' 0))'
+      '               select @total_output = @TOTAL_VALUE;'
+      '        end;'
+      #9'COMMIT'
+      'END')
+    Left = 32
+    Top = 728
+  end
+  object FDConnection3: TFDConnection
+    Params.Strings = (
+      'Server=192.168.4.217,1433'
+      'User_Name=dbo'
+      'Password=agabriel'
+      'ApplicationName=Enterprise/Architect/Ultimate'
+      'Workstation=SERVER'
+      'MARS=yes'
+      'Database=InventoryIQ'
+      'DriverID=MSSQL')
+    LoginPrompt = False
+    Left = 120
+    Top = 32
   end
 end
